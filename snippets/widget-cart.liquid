@@ -1,0 +1,61 @@
+<div class="cart">
+
+{% if cart.items == empty %}
+  <p class="empty">Your shopping cart is empty. Check out our <a href="/collections/all">catalog</a> to see what's available.</p>
+{% endif %}
+
+<div class="line-items widget-cart-line-items">
+
+  {% for item in cart.items %}
+  <div class="line-item" data-variant-id="{{item.id}}">
+
+    <a class="title" href="{{item.product.url}}" title="View {{item.title | escape }}">
+      {{ item.product.title }}
+    </a>
+
+    {% if item.variant.title != 'Default Title' %}
+    <div class="variant">
+      {{item.variant.title}}
+    </div>
+    {% endif %}
+
+    {% for p in item.properties %}
+      {% unless p.last == blank %}
+        <div class="line-item-property text-color-quiet">
+        {{ p.first }}:
+        {% if p.last contains '/uploads/' %}
+        <div class="value"><a class="fancybox" href="{{ p.last }}">{{ p.last | split: '/' | last }}</a></div>
+        {% else %}
+        <div class="value">{{ p.last }}</div>
+        {% endif %}
+        </div>
+      {% endunless %}
+    {% endfor %}
+
+    <div class="pricing">
+      <div class="amounts">
+        <span class="price">{{ item.price | money }}</span>
+        <span>x</span>
+        <span class="quantity">{{ item.quantity }}</span>
+      </div>
+      <div class="price line-price">{{ item.line_price | money }}</div>
+    </div>
+
+  </div>
+  <!-- /.line-item -->
+  {% endfor %}
+
+</div>
+
+<div class="totals">
+  <span class="price-prefix text-color-quiet">Subtotal:</span>
+  <span class="price right" data-money-with-currency>{{ cart.total_price | money_with_currency }}</span>
+</div>
+
+<div class="form-actions">
+  <a href="/cart" class="view-cart button small secondary">View cart</a>
+  <a href="/checkout" class="checkout button small">Checkout</a>
+</div>
+
+</div>
+<!-- /.cart -->

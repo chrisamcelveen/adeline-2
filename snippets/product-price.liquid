@@ -1,0 +1,17 @@
+<span class="pricing">
+  {% if product.available %}
+
+    {% if product.price_varies %}
+      <span class="from">from</span>
+    {% endif %}
+
+    {% if product.compare_at_price_max > product.price %}
+      <span class="price compare">{{ product.compare_at_price_max | money }}</span>
+    {% endif %}
+
+    <span class="price">{{ product.price | money }}</span>
+
+  {% else %}
+    <span class="price">Sold Out</span>
+  {% endif %}
+</span>

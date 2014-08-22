@@ -1,0 +1,82 @@
+{% assign has_sidebar = false %}
+{% include 'settings' %}
+{% include locale %}
+
+<!-- Slider -->
+{% if settings.slides_visible? %}
+  {% assign area = 'index' %}
+  <div id="slider" class="row">
+    <div class="large-12 columns">
+      <div class="slides-wrap">
+        {% include 'slides' with area %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<!-- Highlight bar -->
+{% if settings.index_hb_visible? %}
+<div class="highlight-bar clearfix">
+  <div class="row padded-h">
+    <div class="small-12 columns">
+      {{ pages[settings.index_hb_content].content }}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% include 'content-wrap-open' %}
+{% include 'content-open' %}
+
+<!-- Promotional boxes -->
+{% if settings.index_display_promo_boxes? %}
+
+  <div class="promo-boxes">
+    <div class="row">
+      <div class="medium-3 columns">
+        {% if settings.index_promo_box_01_link != '' %}
+          {{ 'index-promo-box-01.jpg' | asset_url | img_tag: settings.index_promo_box_01_alt | link_to: settings.index_promo_box_01_link }}
+        {% else %}
+          {{ 'index-promo-box-01.jpg' | asset_url | img_tag: settings.index_promo_box_01_alt }}
+        {% endif %}
+        <p class="">​Narumi Bone China products ​have captivated people all over the world ​ with its high level​s​ of whiteness and translucency ​.​ ​A​nd ​ it​ ​has​ established ​its ​permanent position as the finest and most prestigious chinaware​ in the industry. Adeline is Narumi's official distributor in the U.S. and is proudly carrying Narumi fine bone china products.</p>
+      </div>
+      <div class="medium-3 columns">
+        {% if settings.index_promo_box_01_link != '' %}
+          {{ 'index-promo-box-01.jpg' | asset_url | img_tag: settings.index_promo_box_01_alt | link_to: settings.index_promo_box_01_link }}
+        {% else %}
+          {{ 'index-promo-box-01.jpg' | asset_url | img_tag: settings.index_promo_box_01_alt }}
+        {% endif %}
+        <p class="">Our artisinal coffee is created in the coffee capital of the US, Seattle.</p>
+      </div>
+      <div class="medium-3 columns">
+        {% if settings.index_promo_box_02_link != '' %}
+          {{ 'index-promo-box-02.jpg' | asset_url | img_tag: settings.index_promo_box_02_alt | link_to: settings.index_promo_box_02_link }}
+        {% else %}
+          {{ 'index-promo-box-02.jpg' | asset_url | img_tag: settings.index_promo_box_02_alt }}
+        {% endif %}
+        <p class="">Integrates stability & elegance of traditional wares with modernity 
+        Artistic mood/professional accomplishments/practical considerations A cup of good tea-refreshing with our sandstone ceramics teapot will extend your well-being.</p>
+      </div>
+      <div class="medium-3 columns">
+        {% if settings.index_promo_box_03_link != '' %}
+          {{ 'index-promo-box-03.jpg' | asset_url | img_tag: settings.index_promo_box_03_alt | link_to: settings.index_promo_box_03_link }}
+        {% else %}
+          {{ 'index-promo-box-03.jpg' | asset_url | img_tag: settings.index_promo_box_03_alt }}
+        {% endif %}
+        <p class="">We also import some of the worlds most well known high quality teas from all over the world.</p>
+      </div> 
+    </div>
+  </div>
+
+{% endif %}
+
+<!-- Page content -->
+{% if pages[settings.index_content_s1].content != '' %}
+  <div class="page-content">
+  {{ pages[settings.index_content_s1].content }}
+  </div>
+{% endif %}
+
+{% include 'content-close' %}
+{% include 'content-wrap-close' %}

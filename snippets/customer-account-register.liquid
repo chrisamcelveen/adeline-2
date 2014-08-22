@@ -1,0 +1,40 @@
+<div id="customer-login" class="account-session-module">
+  <div class="inner">
+
+  <h3>Create a New Account</h3>
+
+  {% form 'create_customer' %}
+
+  <fieldset>
+
+    {% include 'form-errors' %}
+
+    <div class="row">
+      <div class="large-12 columns{% if form.errors contains 'first_name' %} error{% endif %} field">
+        <input type="text" name="customer[first_name]" id="customer_first_name" data-required="true" data-required-message="First name is required" placeholder="First name">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns{% if form.errors contains 'last_name' %} error{% endif %} field">
+        <input type="text" name="customer[last_name]" id="customer_last_name" data-required="true" data-required-message="Last name is required" placeholder="Last name">
+      </div>
+    </div>
+
+    {% include 'customer-account-field-email' %}
+    {% include 'customer-account-field-password' %}
+
+    <div class="form-actions">
+      <button type="submit" class="button">Create account</button>
+
+      <div class="secondary-actions">
+        {{ "Return to sign-in" | customer_login_link }}
+      </div>
+    </div>
+
+  </fieldset>
+
+  {% endform %}
+
+  </div>
+</div>

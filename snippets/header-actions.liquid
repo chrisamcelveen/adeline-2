@@ -1,0 +1,76 @@
+<!-- BEGIN #header-actions -->
+<div id="header-actions" class="show-for-medium-up">
+  <div class="row padded-h">
+    <div class="small-12 columns">
+      <div class="table">
+
+        <div class="cell">
+          <!-- Tagline -->
+          {% if settings.brand_tagline != "" %}
+            <p id="brand-tagline" class="no-margin">
+              {{settings.brand_tagline}}
+            </p>
+          {% else %}
+          &nbsp;
+          {% endif %}
+        </div>
+
+        <div class="cell">
+          <p class="no-margin">
+
+            <!-- Cart -->
+            <span class="cart">
+              <span class="items">
+                <a href="/cart">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span class="totals">
+                    <span class="count">{{ cart.item_count }}</span> {{ cart.item_count | pluralize: 'item', 'items' }} - <span class="price" data-money-format>{{ cart.total_price | money }}</span>
+                  </span>
+                </a>
+              </span>
+            </span>
+
+            <span class="divider">/</span>
+
+            <!-- Session -->
+            <span class="session">
+            {% if shop.customer_accounts_enabled %}
+              {% if customer %}
+              <a href="/account">Hi there, {{ customer.first_name }}</a>
+              <span class="divider">/</span>
+              {{ "Sign-out" | customer_logout_link }}
+              {% else %}
+              {{ "Sign-in" | customer_login_link }}
+              {% endif %}
+              <span>or</span>
+            {% endif %}
+            </span>
+
+            <!-- Checkout -->
+            <a class="checkout" href="/checkout">Checkout</a>
+
+          </p>
+        </div>
+
+        <div class="cell">
+          <!-- Search -->
+          <div id="header-search">
+            <form class="form-search form-inline" name="search" action="/search">
+              <input type="text" name="q" class="search-query search replace" placeholder="Search">
+            </form>
+          </div>
+        </div>
+
+        {% if settings.multicurrency_enabled %}
+        <div class="cell">
+          <!-- Currency selector -->
+          {% include 'currency-select' %}
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- /#header-actions -->

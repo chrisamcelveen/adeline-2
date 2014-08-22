@@ -1,0 +1,13 @@
+<script>
+
+  var shopCurrency = '{{ shop.currency }}';
+  var defaultCurrency = '{{ settings.default_currency }}' || shopCurrency;
+  var cookieCurrency = Currency.cookie.read();
+
+  Currency.format = '{{ settings.currency_format }}';
+
+  Currency.money_with_currency_format[shopCurrency] = {{ shop.money_with_currency_format | strip_html | json }};
+
+  Currency.money_format[shopCurrency] = {{ shop.money_format | strip_html | json }};
+
+</script>

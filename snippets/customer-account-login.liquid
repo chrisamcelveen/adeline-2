@@ -1,0 +1,41 @@
+<div id="customer-login" class="account-session-module">
+  <div class="inner">
+
+  <h3>Member Sign-in</h3>
+
+  {% if settings.customer_account_login_text != '' %}
+  <p class="note">{{ settings.customer_account_login_text }}</p>
+  {% endif %}
+
+  {% form 'customer_login' %}
+
+  <fieldset>
+
+    {% if form.errors %}
+    <div class="alert-box error">
+      <ul class="errors-list">
+        {% for field in form.errors %}
+          <li>{{ form.errors.messages[field] }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% include 'customer-account-field-email' %}
+    {% include 'customer-account-field-password' %}
+
+    <div class="form-actions">
+      <button type="submit" class="button">Login</button>&nbsp;&nbsp;
+      <a href="/account/register" class="button secondary">Create account</a>
+
+      <div class="secondary-actions">
+        <a href="#" id="reset-password">Recover password</a>
+      </div>
+    </div>
+
+  </fieldset>
+
+  {% endform %}
+
+  </div>
+</div>

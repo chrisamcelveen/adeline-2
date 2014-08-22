@@ -1,0 +1,72 @@
+{% assign has_sidebar = false %}
+{% assign has_crumbs = true %}
+{% include 'settings' %}
+{% include locale %}
+{% include 'page-header' with "Shopping Cart" %}
+{% include 'content-wrap-open' %}
+{% include 'content-open' %}
+
+{% if cart.items == empty %}
+  <p class="empty">Your shopping cart is empty. Check out our <a href="/collections/all">catalog</a> to see what's available.</p>
+{% else %}
+
+<form id="cartform" action="/cart" method="post">
+
+  {% include 'line-items-cart' %}
+
+  <div class="row">
+    <div class="large-7 columns">
+
+      <div class="row">
+        <div class="large-5 columns">
+          {% include 'shipping-calculator' %}
+        </div>
+
+        <div class="large-5 columns">
+          {% if settings.cart_display_note? %}
+            {% include 'order-note' %}
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+
+    <div class="large-5 columns">
+      <div class="checkout-actions">
+        <h2>
+          <span class="price-prefix">Subtotal</span>
+          <span class="currency text-color-quiet">{{ shop.currency }}</span>
+          <span class="price">{{ cart.total_price | money }}</span>
+        </h2>
+
+        <div class="form-actions">
+          <input type="submit" class="button secondary large" id="update-cart" name="update" value="Update" />
+          <input type="submit" class="button large" name="checkout" value="Checkout" />
+        </div>
+
+        {% if additional_checkout_buttons %}
+          <div class="additional-checkout-actions">
+            {{ content_for_additional_checkout_buttons }}
+          </div>
+        {% endif %}
+
+        <div class="continue-shopping">
+          or <a href="/collections/all" data-go-back="1">continue shopping</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</form>
+
+{% if settings.cart_page_content != '' %}
+<div class="additional-content">
+{{ pages[settings.cart_page_content].content }}
+</div>
+{% endif %}
+
+{% endif %}
+
+{% include 'content-close' %}
+{% include 'content-wrap-close' %}

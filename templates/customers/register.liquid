@@ -1,0 +1,16 @@
+{% layout settings.customer_layout %}
+
+{% assign has_sidebar = false %}
+{% assign has_crumbs = false %}
+{% include 'page-header' with 'My Account' %}
+{% include 'content-wrap-open' %}
+{% include 'content-open' %}
+
+<div class="row">
+  <div class="large-5 columns large-centered">
+    {% include 'customer-account-register' %}
+  </div>
+</div>
+
+{% include 'content-close' %}
+{% include 'content-wrap-close' %}

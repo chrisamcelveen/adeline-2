@@ -1,0 +1,31 @@
+{% assign display_excerpt = blog_prefix | append: '_display_excerpt?' %}
+{% assign display_sharing = blog_prefix | append: '_display_sharing?' %}
+{% assign display_prev_next = blog_prefix | append: '_display_prev_next?' %}
+{% assign display_tags = blog_prefix | append: '_display_tags?' %}
+{% assign excerpt_length = blog_prefix | append: '_excerpt_length' %}
+{% assign read_more_text = blog_prefix | append: '_read_more_text' %}
+
+{% if blog_prefix != 'article' %}
+  <!-- Article list -->
+
+  {% if blog_prefix == 'blog_articles' %}
+    {% if settings.blog_articles_display_style == 'excerpt' %}
+      {% include 'article-excerpt' %}
+    {% else %}
+      <div class="entry-content section">
+        {{ article.content }}
+      </div>
+    {% endif %}
+  {% endif %}
+
+
+  {% if settings[display_excerpt]  %}
+    {% include 'article-excerpt' %}
+  {% endif %}
+
+{% else %}
+  <!-- Single article -->
+  <div class="entry-content section">
+    {{ article.content }}
+  </div>
+{% endif %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  {% include 'html-tag' %}
+  <head>
+    {% include 'settings' %}
+    {% include locale %}
+    {% include 'meta' %}
+    {% include 'head-styles' %}
+    {% include 'head-scripts' %}
+    {{ content_for_header }}
+  </head>
+
+  {% include 'body-class' %}
+
+  <body class="{{ body_class }}" id="{{ page_title | handle }}">
+
+    {% if settings.display_browsehappy? %}
+    <!--[if lte IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/" data-target="new-window">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    {% endif %}
+
+    {% include 'notify-bar' %}
+
+    <div id="app-wrap">
+      {% include 'header-actions' %}
+      {% include 'header' %}
+
+      <section id="site-body">
+        <div class="row">
+          <div class="small-12 columns">
+            {% if template == 'list-collections' %}
+              {% include 'collection-listing' %}
+            {% else %}
+              {{ content_for_layout }}
+            {% endif %}
+          </div>
+        </div>
+        <div class="footer-widgets-top"></div>
+      </section>
+
+      {% include 'footer' %}
+    </div>
+
+    {% include 'footer-scripts' %}
+  </body>
+</html>

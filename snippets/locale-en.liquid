@@ -1,0 +1,36 @@
+{% comment %}
+
+Note: To avoid JavaScript errors, only use single quotes inside of double quoted string values.
+
+{% endcomment %}
+
+
+{% comment %} Cart {% endcomment %}
+
+{% assign cart_add_button = settings.product_cart_button_text %}
+
+{% assign cart_remove = "Are you sure you want to remove [productName] [productVariant] from your cart?" %}
+
+{% assign cart_add_error = "[productTitle] could not be added to your cart. Please try again." %}
+
+{% assign cart_add_variants = "[productTitle] has multiple variants. Please visit the product detail page to select your preference. <div class='actions'><a class='button' href='[productURL]'>View Product Details</a></div>" %}
+
+{% assign cart_add_success = "[productTitle] [productVariant] has been added to your cart (x[quantityAdded]). <div class='actions'><a href='/cart' class='button'>View Cart</a></div>" %}
+
+{% assign cart_add_error = "" %}
+
+
+{% comment %} Order Notes {% endcomment %}
+
+{% assign order_note_add = "Add Note" %}
+{% assign order_note_edit = "Edit Note" %}
+{% assign order_note_save = "Save Note" %}
+
+
+{% comment %} Shipping Calculator {% endcomment %}
+
+{% assign shipping_calc_get_rates = "Find Rates" %}
+{% assign shipping_calc_searching = "Searching&hellip;" %}
+{% assign shipping_calc_no_rates = "Sorry, we do not currently ship to [destination]." %}
+{% assign shipping_calc_rates = "There are [ratesCount] rates available for [destination] (you will be able to select your preferred method during checkout):" %}
+{% assign shipping_calc_rate = "There is one rate available for [destination]:" %}

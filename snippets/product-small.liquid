@@ -1,0 +1,85 @@
+<div class="product card">
+
+  <article class="hproduct product-{{product.id}} {{product.handle}}" data-url="{{ product.url | within: collection }}" data-variant-count="{{product.variants.size }}">
+
+    <div class="image-wrap">
+      {% if settings.collection_image_height != "0" %}
+      <div class="image" data-fix-height="true">
+      {% else %}
+      <div class="image">
+      {% endif %}
+
+      <a href="{{ product.url | within: collection }}" title="{{ product.title }}"><img src="{{ product.images.first | product_img_url: 'large' }}" alt="{{ product.title }}" /></a>
+    </div>
+    </div>
+
+    <div class="details">
+
+      <header>
+        <h2>
+          <a href="{{ product.url | within: collection }}" title="{{ product.title }}">
+            <span class="name">{{ product.title }}</span>
+          </a>
+        </h2>
+      </header>
+
+      {% if settings.collection_display_vendor? %}
+      <span class="brand">{{ product.vendor }}</span>
+      {% endif %}
+
+      {% if settings.collection_display_price? %}
+      {% include 'product-price' %}
+      {% endif %}
+
+      {% if settings.collection_display_actions? %}
+      <div class="actions">
+        {% if product.available %}
+
+        <form method="post" action="/cart/add">
+
+        {% if settings.collection_display_variant_selector? %}
+
+          <select name='id' class="product-select option-selector">
+            {% for variant in product.variants %}
+              {% if variant.available %}
+              <option value="{{ variant.id }}">
+              {{ variant.title }} - {{ variant.price | money }}
+              </option>
+              {% endif %}
+            {% endfor %}
+          </select>
+
+        {% else %}
+
+          {% for variant in product.variants %}
+            {% if variant.available %}
+              {% assign available_variant_id = variant.id %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          <input type="hidden" name="id" value="{{ available_variant_id }}" />
+
+        {% endif %}
+
+          <button class="add-to-cart button small" type="submit">{{cart_add_button}}</button>
+        </form>
+
+        {% else %}
+        <a href="#" class="button small disabled">Sold Out</a>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      {% if settings.collection_display_sale? %}
+      {% if product.compare_at_price_max > product.price %}
+      <span class="sticker">
+        <span>{{ settings.collection_sale_sticker_text }}</span>
+      </span>
+      {% endif %}
+      {% endif %}
+    </div>
+
+  </article>
+
+</div>

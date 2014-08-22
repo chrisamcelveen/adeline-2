@@ -1,0 +1,26 @@
+{% assign has_sidebar = false %}
+{% assign has_crumbs = true %}
+{% include 'page-header' with 'Collections' %}
+{% include 'content-wrap-open' %}
+{% include 'content-open' %}
+
+<section>
+
+  {% if collections.size > 0 %}
+    <div class="collections cards">
+      <ul class="block-grid small-block-grid-1 medium-block-grid-{{settings.collection_products_per_row_medium}} large-block-grid-{{settings.collection_products_per_row_large}}">
+      {% for collection in collections %}
+        <li>{% include 'collection-small' %}</li>
+      {% endfor %}
+      </ul>
+    </div>
+
+    {% include 'pagination-numbered' %}
+  {% else %}
+    <p class="empty">There are currently no products in this collection.</p>
+  {% endif %}
+
+</section>
+
+{% include 'content-close' %}
+{% include 'content-wrap-close' %}

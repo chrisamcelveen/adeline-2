@@ -1,0 +1,55 @@
+<script type="text/javascript">
+  var Empyre = Empyre || {};
+
+  Empyre.Theme = {
+    name: "{{ theme_name }}",
+    version: "{{ theme_version }}",
+    config: {
+      locale: "en",
+      ajaxCartEnabled: {{ settings.ajax_cart_enabled }},
+      debugMode: {{ debug_mode }},
+      indexProductsLimit: {{ settings.index_products_limit }},
+      multicurrencyEnabled: {{ settings.multicurrency_enabled }},
+      productQtySelectMax: {{ product_qty_select_max }},
+      productFIZoomEnabled: {{ settings.product_fi_zoom_enabled? }},
+      productSetVariantFromSecondary: {{ product_set_variant_from_secondary }}
+    },
+    current: {
+      article: {{ article | json }},
+      product: {{ product | json }},
+      collection: {{ collection | json }},
+      customerLoggedIn: {{ customer_logged_in }}
+    },
+    shop: {
+      currency: "{{ shop.currency }}",
+      defaultCurrency: "{{ settings.default_currency }}" || "{{ shop.currency }}",
+      description: "{{ shop.description | escape }}",
+      domain: "{{ shop.domain | escape }}",
+      moneyFormat: {{ shop.money_format | strip_html | json }},
+      moneyWithCurrencyFormat: {{ shop.money_with_currency_format | strip_html | json }},
+      name: "{{ shop.name | escape }}",
+      url: "{{ shop.url | escape }}"
+    },
+    dictionary: {
+      cart: {
+        addButton: "{{ cart_add_button }}",
+        removeItem: "{{ cart_remove }}",
+        addItemError: "{{ cart_add_error }}",
+        addItemVariants: "{{ cart_add_variants }}",
+        addItemSuccess: "{{ cart_add_success }}"
+      },
+      orderNotes: {
+        add: "{{ order_note_add }}",
+        edit: "{{ order_note_edit }}",
+        save: "{{ order_note_save }}"
+      },
+      shippingCalculator: {
+        getRates: "{{ shipping_calc_get_rates }}",
+        searching: "{{ shipping_calc_searching }}",
+        noRates: "{{ shipping_calc_no_rates }}",
+        rates: "{{ shipping_calc_rates }}",
+        rate: "{{ shipping_calc_rate }}"
+      }
+    }
+  };
+</script>

@@ -1,0 +1,13 @@
+<div class="entry-summary">
+  {% if article.excerpt == blank %}
+    {{ article.content | truncatewords: settings[excerpt_length] }}
+  {% else %}
+    {{ article.excerpt }}
+  {% endif %}
+
+  {% if settings[read_more_text] != '' %}
+    <p class="more-link">
+      <a href="{{article.url}}" class="button">{{ settings[read_more_text] }}</a>
+    </p>
+  {% endif %}
+</div>

@@ -1,0 +1,100 @@
+{% assign widget_area = 'footer'%}
+{% assign footer_widgets_class = 'footer-widgets' %}
+
+{% if show_footer_widgets_small == false %}
+  {% assign footer_widgets_class = footer_widgets_class | append: ' show-for-medium-up' %}
+{% endif %}
+
+{% if settings.footer_columns != "0" %}
+  <!-- BEGIN #footer-widgets -->
+  <aside class="{{ footer_widgets_class }}">
+    <div class="row padded">
+      <div class="large-12 columns">
+
+        <div class="widgets">
+          <div class="row">
+            {% for i in (1..settings.footer_columns) %}
+              {% assign span_width = 'footer_column_width_0' | append: i %}
+              <div class="large-{{settings[span_width]}} columns">
+                {% include 'get-widget' with i | newline_to_br %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </aside>
+  <!-- /#footer-widgets -->
+{% endif %}
+
+
+<!-- BEGIN #site-footer -->
+<footer id="site-footer">
+
+  <div class="row padded-h">
+    <div class="small-12 columns">
+
+      {% if settings.multicurrency_enabled %}
+      <div class="hide-for-medium-up">
+      {% include 'currency-select' %}
+      </div>
+      {% endif %}
+
+      {% include 'mobile-nav-select' %}
+      {% include 'nav-footer' %}
+      {% include 'payment-methods' %}
+      {% include 'security-seal-shopify' %}
+
+      <div id="fine-print" class="text-color-quiet">
+
+        <!-- BEGIN #copyright -->
+        <div id="copyright">
+          <p class="date">&copy; {{ 'now' | date: '%Y' }}</p>
+
+          {% if settings.brand_text != "" %}
+            <p>{{ settings.brand_text | link_to: shop.url }}.</p>
+          {% else %}
+            <p>{{shop.name | link_to: shop.url }}</p>
+          {% endif %}
+
+          <p>All rights reserved.</p>
+
+          {% if settings.footer_display_currency? %}
+            {% if settings.multicurrency_enabled %}
+              <p class="shop-currency multi-currency">Prices displayed in <span class="currency">{{ shop.currency }}</span>. Checkout in <span class="currency" data-disable-conversion>{{ shop.currency }}</span>.</p>
+            {% else %}
+              <p class="shop-currency">All prices in <span class="currency">{{ shop.currency }}</span>.</p>
+            {% endif %}
+          {% endif %}
+        </div>
+        <!-- /#copyright -->
+
+        <div class="span3 margin-20">
+          <a href="www.facebook.com"><i class="fa fa-facebook fa-2x"></i></a>
+          <a href="www.twitter.com"><i class="fa fa-twitter fa-2x"></i></a>
+          <a href="www.linkedin.com"><i class="fa fa-linkedin fa-2x"></i></a>
+        </div>
+
+        <div class="span3">
+          <p class="white">14670 NE 8th Street, suite 200 Bellevue, WA 98007<br />+1 (425) 749-2685</p>
+        </div>
+
+        <!-- BEGIN #attributions -->
+        <div id="attributions">
+          <p class="shopify">{{ powered_by_link }}.</p>
+
+          {% unless settings.remove_attribution_empyre? %}
+          <p class="empyre">
+            Design by <a href="http://empy.re" data-target="new-window">Empyre</a>.
+          </p>
+          {% endunless %}
+        </div>
+        <!-- /#attributions -->
+      </div>
+
+    </div>
+  </div>
+
+</footer>
+<!-- /#site-footer -->

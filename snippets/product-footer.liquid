@@ -1,0 +1,9 @@
+<div class="footer section">
+
+{% include 'tags' with product %}
+
+{% if settings.product_display_sharing_google_plus? or settings.product_display_sharing_twitter? or settings.product_display_sharing_facebook? or settings.product_display_sharing_pinterest? %}
+{% include 'share' with product %}
+{% endif %}
+
+</div>

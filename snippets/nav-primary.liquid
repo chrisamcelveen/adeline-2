@@ -1,0 +1,19 @@
+{% assign nav_area = 'primary' %}
+{% assign nav = linklists[settings.header_nav_primary_list] %}
+{% assign levels = 3 %}
+
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="toggle-topbar">
+      <a href=""><span>Menu</span>&nbsp;<i class="fa fa-bars"></i></a>
+    </li>
+  </ul>
+
+  <section class="top-bar-section">
+    {{ 'logo.png' | asset_url | img_tag: 'logo.png' }}
+    <ul class="right clearfix">
+      {% include 'nav-structure' %}
+    </ul>
+  </section>
+
+</nav>

@@ -1,0 +1,16 @@
+<div id="brand">
+  {% if settings.brand_type == 'image' %}
+
+  <h1 id="brand-primary-image" title="{{shop.name}}">
+    <a href="/">
+      <span>{{ shop.name }}</span>
+      <img src="{{'logo.png' | asset_url}}" alt="{{shop.name}}">
+    </a>
+  </h1>
+
+  {% elsif settings.brand_text != "" %}
+    <h1 id="brand-primary-text">{{ settings.brand_text | link_to: shop.url }}</h1>
+  {% else %}
+    <h1 id="brand-primary-text">{{shop.name | link_to: shop.url}}</h1>
+  {% endif %}
+</div>

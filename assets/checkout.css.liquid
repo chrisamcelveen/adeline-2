@@ -1,0 +1,583 @@
+/*  Variables
+/*-------------------------- */
+{% assign subtheme = settings.subtheme %}
+{% assign accent_color = settings.color_button %}
+{% assign logo_height = "60px" %}
+{% assign error_color = "#E45F87" %}
+{% assign line_color = "#e1e2e3" %}
+{% assign text_color = "#646B71" %}
+{% assign text_color_loud = "#4E5358" %}
+{% assign text_color_quiet = "#8A8E91" %}
+{% assign site_body_bg = subtheme | prepend: "img-" | append: "-bg-body.jpg" | asset_url %}
+
+/*  Reset
+/*-------------------------- */
+
+.group,
+#addresses,
+#buttons,
+#email,
+#main,
+#overview,
+#container.slim #main,
+#header,
+#container.slim #header,
+#footer,
+#container.slim #footer {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 810px;
+}
+
+#container.slim {
+  width: 510px;
+}
+
+#content {
+  padding: 0;
+}
+
+
+/*  Body
+/*-------------------------- */
+
+body{
+  background-image: url({{ site_body_bg }});
+  background-color: {{ settings.bg_content_color }};
+  color: {{ text_color }};
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+
+  {% if settings.bg_content_img == 'custom' %}
+    background-image: url({{'bg-content.png' | asset_url }});
+  {% elsif settings.bg_content_img == 'none' %}
+    background-image: none;
+  {% endif %}
+
+  background-position: {{ settings.bg_content_position_x }} {{ settings.bg_content_position_y }};
+
+  background-repeat: {{ settings.bg_content_repeat }};
+
+  {% if settings.bg_content_attachment == 'full' %}
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+  {% else %}
+    background-attachment: {{ settings.bg_content_attachment }};
+  {% endif %}
+
+  padding-top: 40px;
+}
+
+a {
+  color: {{ accent_color }};
+}
+
+a:hover {
+  color: {{ text_color_loud }};
+}
+
+a, a:hover, a:active {
+  outline: 0
+}
+
+small {
+  font-size: 13px;
+}
+
+
+/*  Elements
+/*-------------------------- */
+
+/*  Forms  */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+  border: 1px solid #bcc3ca;
+  border-radius: 2px;
+  box-shadow: none;
+  color: {{ text_color_loud }};
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 14px;
+  padding: 0.5em;
+  transition: border-color 0.15s;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="date"]:hover,
+input[type="datetime"]:hover,
+input[type="datetime-local"]:hover,
+input[type="month"]:hover,
+input[type="week"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
+input[type="search"]:hover,
+input[type="tel"]:hover,
+input[type="time"]:hover,
+input[type="url"]:hover,
+textarea:hover {
+  border-color: {{ text_color_loud }};
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+  border-color: {{ accent_color }};
+  outline: none;
+}
+
+label {
+  font-weight: normal;
+}
+
+/*  Headings  */
+h1, h2, h3, h4, h5, h6, .group h1, .group h2, .group h3, .group h4 {
+  border: none;
+  color: {{ text_color_loud }};
+  font-weight: 500;
+  margin-bottom: 1em;
+  padding-bottom: 0.5em;
+}
+
+/*  Tables  */
+td,
+td.lbl,
+.form td {
+  padding: 0;
+}
+
+.form td {
+  padding: 0.5em 0;
+}
+
+
+/*  Errors  */
+.field-with-errors {
+  background: none;
+  border: none;
+  display: inline;
+  padding: 0;
+  width: auto;
+}
+
+
+.field-with-errors .error-message {
+  color: {{ error_color }};
+  font-size: 11px;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.field-with-errors input[type="text"],
+.field-with-errors input[type="email"] {
+  border-color: {{ error_color }};
+}
+
+.field-with-errors.severe-error {
+  color: {{ error_color }};
+}
+
+.field-with-errors p:last-of-type {
+  margin-bottom: 2em;
+}
+
+
+/*  Loading spinner  */
+
+.loading-spinner {
+  display: block !important;
+  float: none !important;
+  text-align: center !important;
+}
+
+
+/*  Sections
+/*-------------------------- */
+
+/*  General  */
+#overview,
+#email,
+#addresses,
+#payment,
+#payment-method,
+#newsletter {
+  border-bottom: 1px solid {{ line_color }};
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+}
+
+#addresses,
+#newsletter {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+#email label,
+.group h3 {
+  color: #44484C;
+  font-weight: 500;
+}
+
+
+/*  Info bar  */
+#info-bar{
+  background-color: #fff;
+  padding: 0.5em;
+}
+
+#info-bar img {
+  margin-right: 5px;
+}
+
+
+/*  Header  */
+#header {
+  background-color: {{ settings.header_bg_color }};
+  border-bottom: 1px solid #e4e5e6;
+  color: {{ settings.color_brand_text }};
+  padding: 50px 30px;
+  text-align: center;
+  width: 750px;
+}
+
+#container.slim #header {
+  background-color: {{ settings.header_bg_color }};
+  color: {{ settings.color_brand_text }};
+  padding: 50px 30px;
+  text-align: center;
+  width: 450px;
+}
+
+#header h1 {
+  color: {{ settings.color_brand_text }};
+  font-weight: 400;
+  margin: 0;
+  padding: 1.5em 0;
+}
+
+#header h1 .title{
+  font-size: 31px;
+  text-shadow: none;
+
+  {% if settings.typo_logo_font_google != '' %}
+    @import url(http://fonts.googleapis.com/css?family={{ settings.typo_logo_font | replace: ' ', '+' }}:400,500,600,700);
+    font-family: {{ settings.typo_logo_font_google }}, Helvetica, Arial, sans-serif;
+  {% else %}
+    font-family: {{ settings.typo_logo_font }};
+  {% endif %}
+}
+
+#header h1 .subtitle{
+  color: {{ settings.color_nav_primary }};
+  display: block;
+  font-size: 0.8em;
+  padding-top: 1em;
+  font-weight: 300;
+}
+
+#header #tagline {
+  margin: 0;
+  padding: 0;
+}
+
+
+{% if settings.brand_type == 'image' %}
+
+#header #logo {
+  background-color: transparent;
+  background-image: url({{'logo.png' | asset_url}});
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+  display: block;
+  height: {{ logo_height }};
+}
+
+#header h1 .title {
+  display: none;
+}
+
+#header h1 .subtitle {
+  font-size: 0.8em;
+}
+
+{% endif %}
+
+
+
+/*  Main  */
+#main {
+  background-color: #fff;
+  padding: 3em;
+  padding: 20px 30px;
+  width: 750px;
+}
+
+#container.slim #main {
+  background-color: #fff;
+  padding: 3em;
+  padding: 20px 30px;
+  width: 450px;
+}
+
+
+/*  Overview  */
+
+/*  Products  */
+#products {
+  border-color: {{ line_color }};
+}
+
+#thumbs div{
+  border-color: {{ line_color }};
+  margin-right: 1em;
+  width: auto !important;
+}
+
+#thumbs h3 {
+  color: {{ text_color_loud }};
+  font-size: 13px;
+  margin-bottom: 0.5em;
+}
+
+#thumbs span {
+  color: {{ text_color_quiet }};
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 0.5em;
+}
+
+#cost, #order-num {
+  color: {{ accent_color }};
+}
+
+
+#container.slim #thumbs td {
+  padding-right: 5%;
+  vertical-align: top;
+}
+
+
+#container.slim #thumbs img {
+  display: block;
+  margin-bottom: 1em;
+}
+
+#container.slim #thumbs h3 {
+  color: {{ text_color_quiet }};
+  line-height: 1.3em;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+#container.slim #thumbs h3 span{
+  color: {{ text_color_loud }};
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+
+/*  Wallet  */
+#wallet .hint {
+  color: {{ text_color_quiet }};
+  font-size: 13px;
+}
+
+
+/*  Email  */
+
+#email h4.active-customer {
+  color: {{ text_color_quiet }};
+  font-size: 13px;
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
+#email .sign-in-message{
+  margin-left: 0;
+}
+
+#email input {
+  font-size: 15px;
+  margin-right: 65px;
+  width: 305px;
+}
+
+/*  Addresses  */
+
+#addresses select#billing_address_selector,
+#addresses select#shipping_address_selector {
+  margin: 0 0 10px 80px;
+  width: 220px;
+}
+
+#addresses select#billing_address_selector {
+  margin-left: 85px;
+}
+
+#addresses label,
+#addresses .label {
+  font-size: 12px;
+}
+
+#addresses input {
+  width: 220px;
+}
+
+#addresses td ul li {
+  display: block;
+  float: none;
+  margin: 0 0 1em 0;
+  width: auto !important;
+}
+
+#addresses td ul li:last-of-type {
+  margin-bottom: 0;
+}
+
+#addresses td ul li label {
+  float: left;
+  height: 2em;
+  width: 80px;
+}
+
+#addresses td ul li input {
+  float: left;
+}
+
+#addresses select#billing_address_country,
+#addresses input#billing_address_province,
+#addresses select#shipping_address_country,
+#addresses input#shipping_address_province {
+  margin: 0 !important;
+  width: 220px !important;
+}
+
+#addresses label[for="billing_address_country"],
+#addresses label[for="billing_address_province"]{
+  margin-right: 5px !important;
+}
+
+#addresses .form #billing-is-shipping td {
+  padding-top: 1em;
+}
+
+#shipping-same.address-notification {
+  background-color: #62707D;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  padding: 1.5em;
+}
+
+
+/*  Payment  */
+#payment p.sst {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+li#credit-cards {
+  padding: 0;
+}
+
+
+/*  Buttons  */
+#buttons {
+  background-color: #f4f5f6;
+  font-size: 14px;
+  padding: 2em 0;
+  text-align: center;
+}
+
+#buttons .small {
+  font-size: 14px;
+}
+
+#buttons a {
+  color: {{ text_color }};
+  outline: 0
+}
+
+#buttons a:hover{
+  color: {{ accent_color }};
+}
+
+#buttons input[type="submit"]{
+  background-color: {{ accent_color }};
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+font-size: 14px;
+  font-weight: 400;
+  outline: 0;
+  padding: 1em 2em;
+  text-shadow: none;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+  transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+#buttons input[type="submit"]:hover {
+  background-color: #62707D;
+  color: #fff;
+}
+
+#buttons input[type="submit"]:active {
+  background-color: #525D67;
+  color: #fff;
+}
+
+
+/*  Footer  */
+#footer {
+  padding: 0 30px 20px 30px;
+  width: 750px;
+}
+
+#container.slim #footer {
+  padding: 0 30px 20px 30px;
+  width: 450px;
+}

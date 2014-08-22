@@ -1,0 +1,59 @@
+{% assign default_fields = 'Name, Email!' %}
+{% assign custom_fields = settings.contact_form_custom_fields %}
+{% assign form_fields_string = default_fields | append: ',' | append: custom_fields %}
+{% assign form_fields = form_fields_string | replace: ', ', ',' | split: ',' %}
+
+
+
+<div id="contact-form">
+
+  {% if settings.contact_form_title_text %}
+    <h3>{{ settings.contact_form_title_text }}</h3>
+  {% endif %}
+
+  {% form 'contact' %}
+
+  {% if form.posted_successfully? %}
+  <div class="alert-box success">
+    Thanks for contacting us! We'll get back to you as soon as possible.
+  </div>
+  {% endif %}
+
+  {% include 'form-errors' %}
+
+  <fieldset>
+
+    {% for field in form_fields %}
+
+      {% assign required = false %}
+      {% assign field_title = field | replace: '!', '' %}
+      {% assign field_handle = field_title | handle %}
+
+      {% if field contains '!' %}
+        {% assign required = true %}
+      {% endif %}
+
+      <div class="row">
+        <div class="large-12 columns{% if form.errors contains field_handle %} error{% endif %}">
+          <label for="{{field_handle}}">{{field_title}}</label>
+          <input type="text" id="{{field_handle}}" name="contact[{{field_handle}}]" {% if required == true %}data-required="true" data-required-message="{{field_title}} is required"{% endif %}>
+        </div>
+      </div>
+    {% endfor %}
+
+    <div class="row">
+      <div class="large-12 columns{% if form.errors contains 'body' %} error{% endif %}">
+        <label for="message">Message</label>
+        <textarea id="message" name="contact[body]" data-required="true" data-required-message="Message is required"></textarea>
+      </div>
+    </div>
+
+  </fieldset>
+
+  <div class="form-actions">
+    <button type="submit" class="button">Send message</button>
+  </div>
+
+  {% endform %}
+
+</div>

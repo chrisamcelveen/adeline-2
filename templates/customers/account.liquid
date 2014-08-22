@@ -1,0 +1,79 @@
+{% layout settings.customer_layout %}
+
+{% assign has_sidebar = true %}
+{% assign has_crumbs = true %}
+{% include 'page-header' with 'My Account' %}
+{% include 'content-wrap-open' %}
+{% include 'content-open' %}
+
+
+<h3>Order History</h3>
+
+<div id="customer-orders">
+  {% if customer.orders.size != 0 %}
+
+    <div class="line-order-headers">
+      <div class="row">
+
+        <div class="small-8 columns">
+          <div class="row">
+            <div class="large-4 columns">
+              Order
+            </div>
+            <div class="large-4 columns show-for-large-up">
+              Total
+            </div>
+            <div class="large-4 columns show-for-large-up">
+              <span class="{{ order.financial_status }}">
+                Payment
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="small-4 columns text-right">
+          Status
+        </div>
+
+      </div>
+    </div>
+
+    {% for order in customer.orders %}
+
+    <div class="line-order">
+      <div class="row">
+
+        <div class="small-8 columns">
+          <div class="row">
+            <div class="large-4 columns">
+              <span class="number">{{ order.name | link_to: order.customer_url }}</span>
+              <div class="date-created text-color-quiet">{{ order.created_at | date: "%b %d, %Y" }}</div>
+            </div>
+            <div class="large-4 columns">
+              <span class="price" data-money-with-currency>{{ order.total_price | money_with_currency }}</span>
+            </div>
+            <div class="large-4 columns">
+              <span class="{{ order.financial_status }}">
+                {{ order.financial_status | capitalize }}
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="small-4 columns text-right">
+          {% include 'customer-account-fulfillment-label' %}
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+
+  {% else %}
+    <p>You haven't placed any orders yet.</p>
+  {% endif %}
+</div>
+
+
+{% include 'content-close' %}
+{% include 'content-wrap-close' %}

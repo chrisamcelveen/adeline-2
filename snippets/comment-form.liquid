@@ -1,0 +1,59 @@
+<div id="comment-form" class="section">
+
+  {% if settings.article_comment_form_title_text %}
+  <h3>{{ settings.article_comment_form_title_text }}</h3>
+  {% endif %}
+
+  {% form article %}
+
+  {% if form.posted_successfully? and blog.moderated? %}
+    <div class="alert-box success" data-alert>Your comment has been submitted and will be posted as soon as it's approved by a moderator.</div>
+  {% elsif form.posted_successfully? %}
+    <div class="alert-box success" data-alert>Thanks for the comment!</div>
+  {% else %}
+    {% if form.errors %}
+      <div class="alert-box error" data-alert>Not all the fields have been filled out correctly!</div>
+    {% endif %}
+  {% endif %}
+  <div class="alert-box error" id="verification-error" style="display:none;"></div>
+
+  <fieldset>
+
+    <div class="row">
+      <div class="large-4 small-3 large-push-8 columns">
+        <label for="comment_author" class="inline">Name*</label>
+      </div>
+      <div class="large-8 small-12 large-pull-4 columns{% if form.errors contains 'author' %} error{% endif %}">
+        <input type="text" id="comment_author" name="comment[author]" value="{{ form.author }}" data-required="true" data-required-message="Name is required" placeholder="Name">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-4 small-3 large-push-8 columns">
+        <label for="comment_email" class="inline">Email*</label>
+      </div>
+      <div class="large-8 small-12 large-pull-4 columns{% if form.errors contains 'email' %} error{% endif %}">
+        <input type="email" id="comment_email" name="comment[email]" value="{{ form.email }}" data-required="true" data-required-message="Email address is required"  data-type-email-message="Must be a valid email address" placeholder="Email address">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns{% if form.errors contains 'body' %} error{% endif %}">
+        <label for="comment_body" class="inline hidden">Comment</label>
+        <textarea class="span12" id="comment_body" name="comment[body]" data-required="true" data-required-message="Comment is required" rows="5" placeholder="Comment">{{ form.body }}</textarea>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="button">Add comment</button>
+    </div>
+
+  </fieldset>
+
+  {% endform %}
+
+  {% if blog.moderated? %}
+    <span class="notice text-color-quiet">* Comments must be approved before being displayed.</span>
+  {% endif %}
+
+</div>

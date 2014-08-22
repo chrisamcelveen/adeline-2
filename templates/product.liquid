@@ -1,0 +1,65 @@
+{% assign has_sidebar = false %}
+{% assign has_crumbs = true %}
+{% include 'settings' %}
+{% include locale %}
+{% include 'page-header' with product.title %}
+{% include 'content-wrap-open' %}
+{% include 'content-open' %}
+
+<article class="hproduct product-{{product.id}} {{product.handle}} single">
+  <div class="row">
+
+    <div class="medium-6 columns">
+      <div class="images">
+        {% include 'product-images' %}
+      </div>
+    </div>
+
+    <div class="medium-6 columns">
+      <div class="details">
+
+        {% if collection and settings.product_collection_nav_top? %}
+          {% include 'product-collection-nav' with 'top' %}
+        {% endif %}
+
+        {% if settings.product_display_vendor? %}
+        <div class="brand section">
+          {{ product.vendor | link_to_vendor }}
+        </div>
+        {% endif %}
+
+        <div class="pricing section">
+          <i class="fa fa-spinner fa-spin"></i>
+          <span class="price"></span>
+          <span class="price compare"></span>
+        </div>
+
+        {% if settings.product_variations_location == 'top' %}
+          {% include 'product-variants' %}
+          {% include 'product-body' %}
+        {% else %}
+          {% include 'product-body' %}
+          {% include 'product-variants' %}
+        {% endif %}
+
+        {% include 'product-footer' %}
+
+        {% if collection and settings.product_collection_nav_bottom? %}
+          {% include 'product-collection-nav' with 'bottom' %}
+        {% endif %}
+
+      </div>
+    </div>
+
+  </div>
+</article>
+
+{% if settings.product_display_related? %}
+{% if collection.products.size > 0 or product.collections.first.products.size > 0 %}
+  {% include 'product-related' %}
+{% endif %}
+{% endif %}
+
+
+{% include 'content-close' %}
+{% include 'content-wrap-close' %}

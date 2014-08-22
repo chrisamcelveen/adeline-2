@@ -1,0 +1,8 @@
+{% assign nav_area = 'links_widget' %}
+{% assign nav = linklists[widget_instance_settings] %}
+{% assign levels_string = widget_instance_name | append: '_levels' %}
+{% assign levels = settings[levels_string] | times: 1 %}
+
+<ul class="side-nav">
+  {% include 'nav-structure' %}
+</ul>

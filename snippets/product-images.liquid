@@ -1,0 +1,19 @@
+{% assign primary_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+
+{% assign image_title = primary_image.alt ?? primary_image.alt | product.title %}
+
+<!-- Primary image -->
+<div class="primary-image-wrap">
+  <div class="loading">{{ 'img-loading.gif' | asset_url | img_tag }}</div>
+  <a href="{{ primary_image | product_img_url: product_lightbox_image_size }}" data-title="{{ image_title | escape }}"><img class="primary-image" src="{{ primary_image | product_img_url: product_primary_image_size }}" alt="{{ image_title | escape }}" /><span class="actions"><i class="fa fa-expand"></i></span></a>
+</div>
+
+<!-- Secondary images -->
+<ul class="secondary-image-wrap small-block-grid-3 large-block-grid-5">
+{% for image in product.images %}
+  {% assign image_title = image.alt ?? image.alt | product.title %}
+  <li>
+    <a class="fancybox" href="{{ image | product_img_url: product_lightbox_image_size }}" title="{{ image_title | escape }}" data-fancybox-group="secondary-image"><img class="secondary-image" src="{{ image | product_img_url: product_secondary_image_size }}" alt="{{ image_title | escape }}" data-image-index="{{ image.position }}" /><span class="actions"><i class="fa fa-plus"></i></span></a>
+  </li>
+{% endfor %}
+</ul>

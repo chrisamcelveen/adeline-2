@@ -1,0 +1,15 @@
+{% unless order.cancelled %}
+<span class="{{ order.fulfillment_status }}">
+  {% if order.fulfillment_status == 'unfulfilled' %}
+  <span class="label secondary radius">{{ order.fulfillment_status | capitalize }}</span>
+  {% elsif order.fulfillment_status == 'partial' %}
+  <span class="label radius">{{ order.fulfillment_status | capitalize }}</span>
+  {% elsif order.fulfillment_status == 'fulfilled' %}
+  <span class="label success radius">{{ order.fulfillment_status | capitalize }}</span>
+  {% endif %}
+</span>
+{% else %}
+<span class="cancelled">
+  <span class="label radius alert">Cancelled</span>
+</span>
+{% endunless %}

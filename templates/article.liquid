@@ -1,0 +1,47 @@
+{% assign has_sidebar = false %}
+{% assign use_sidebar = 'page' %}
+{% assign has_crumbs = true %}
+{% assign blog_prefix = 'article' %}
+{% include 'settings' %}
+{% include 'page-header' with article.title %}
+{% include 'content-wrap-open' %}
+{% include 'content-open' %}
+
+{% paginate article.comments by 25 %}
+
+{% include 'article-open' %}
+
+<div class="row">
+  <div class="large-3 columns">
+    <div class="show-for-large-up">
+      {% include 'article-meta' %}
+    </div>
+  </div>
+  <div class="large-9 columns">
+
+    {% include 'article-body' %}
+
+    <div class="hide-for-large-up">
+      {% include 'article-meta' %}
+    </div>
+
+    {% include 'article-footer' %}
+
+    {% if blog.comments_enabled? %}
+      {% if article.comments.size > 0 %}
+        {% include 'comments' %}
+        {% include 'pagination-numbered' %}
+      {% endif %}
+      {% include 'comment-form' %}
+    {% endif %}
+
+    {% include 'article-nav' %}
+  </div>
+</div>
+
+{% include 'article-close' %}
+
+{% include 'content-close' %}
+{% include 'content-wrap-close' %}
+
+{% endpaginate %}

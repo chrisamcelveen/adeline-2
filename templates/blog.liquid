@@ -1,0 +1,29 @@
+{% assign has_sidebar = false %}
+{% assign use_sidebar = 'page' %}
+{% assign has_crumbs = true %}
+{% assign blog_prefix = 'blog_articles' %}
+{% include 'settings' %}
+{% include 'page-header' with blog.title %}
+{% include 'content-wrap-open' %}
+{% include 'content-open' %}
+
+{% if current_tags %}
+  <div class="current-tags">
+    Viewing posts tagged <strong>{{current_tags}}</strong>.
+  </div>
+{% endif %}
+
+{% paginate blog.articles by settings.blog_articles_per_page %}
+
+<div class="hfeed">
+{% for article in blog.articles %}
+  {% include 'article-short' %}
+{% endfor %}
+</div>
+
+{% include 'pagination-numbered' %}
+
+{% endpaginate %}
+
+{% include 'content-close' %}
+{% include 'content-wrap-close' %}

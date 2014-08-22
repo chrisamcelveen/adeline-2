@@ -1,0 +1,36 @@
+<div id="activate-account" class="account-session-module">
+  <div class="inner">
+
+  <h3>Activate Account</h3>
+
+  <p class="note">
+    Please enter a password for your new account below.
+  </p>
+
+  {% form 'activate_customer_password' %}
+
+  <fieldset>
+
+    {% if form.errors %}
+    <div class="alert-box error">
+      <ul class="errors-list">
+        {% for field in form.errors %}
+          <li>{{ form.errors.messages[field] }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% include 'customer-account-field-password' %}
+    {% include 'customer-account-field-password-confirm' %}
+
+    <div class="form-actions">
+      <button type="submit" class="button">Activate account</button>
+    </div>
+
+  </fieldset>
+
+  {% endform %}
+
+  </div>
+</div>

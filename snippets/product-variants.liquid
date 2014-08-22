@@ -1,0 +1,79 @@
+{% include 'settings' %}
+{% assign display_variants = true %}
+{% assign display_qty = settings.product_display_quantity? %}
+{% assign variant = product.selected_or_first_available_variant %}
+
+{% if product.variants.size <= 1 %}
+  {% assign display_variants = false %}
+{% endif %}
+
+<div class="variants section">
+  <form action="/cart/add" method="post" id="add-to-cart" class="custom" enctype="multipart/form-data">
+
+    <div class="hidden">
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+      <input type="hidden" name="quantity" value="1">
+    </div>
+
+    <div class="row">
+
+      {% comment %}
+
+      <!-- Sample Line Item Properties -->
+
+      <div class="large-12 columns">
+        <div>
+          <label for="monogram">Monogram:</label>
+          <input type="text" id="monogram" name="properties[Monogram]" />
+        </div>
+        <div>
+          <label for="file">File:</label>
+          <input type="file" id="file" name="properties[File]" />
+        </div>
+      </div>
+
+      {% endcomment %}
+
+
+      <!-- Variant select -->
+      {% if display_variants %}
+      <div class="large-8 columns">
+        <label class="placeholder" for="product-select">&nbsp;</label>
+        <select id="product-select" name='id' class="option-selector">
+          {% for variant in product.variants %}
+            <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      {% endif %}
+
+
+      <!-- Quantity select -->
+      {% if display_qty %}
+      <div class="large-4 columns">
+        <div class="selector-qty">
+        <label for="quantity">Qty.</label>
+        <select id="quantity" name="quantity">
+          {% for i in (1..10) %}
+          <option value="{{ i }}">{{ i }}</option>
+          {% endfor %}
+        </select>
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" name="add" class="add-to-cart button large">{{cart_add_button}}</button>
+    </div>
+
+  </form>
+
+  {% if settings.product_backorder_text != '' %}
+  <div data-alert class="backorder-notice alert-box hide">
+    {{ settings.product_backorder_text | replace: '[product-name]', '<span class="variant-name"></span>' }}
+  </div>
+  {% endif %}
+
+</div>

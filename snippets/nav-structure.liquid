@@ -1,0 +1,86 @@
+{% comment %} Level 1 {% endcomment %}
+
+{% if nav_area == 'primary' %}
+  <li class="has-form hide-for-medium-up">
+    <form name="search" action="/search">
+      <input type="text" name="q" class="search-query search replace" placeholder="search">
+    </form>
+  </li>
+
+  <li class="hide-for-medium-up">
+    <a href="/cart">Checkout ({{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} for {{ cart.total_price | money }})</a>
+  </li>
+{% endif %}
+
+
+{% for link in nav.links %}
+  {% include 'nav-item-class' %}
+  {% capture handle %}{{ link.title | handle }}{% endcapture %}
+
+  {% if linklists[handle] and linklists[handle].links.size > 0 and levels > 1 %}
+    <li class="{{item_class}} has-dropdown">
+      <a href="{{ link.url }}">{{ link.title }}</a>
+
+      {% comment %} Level 2 {% endcomment %}
+
+      <ul class="dropdown">
+      {% for link in linklists[handle].links %}
+        {% include 'nav-item-class' %}
+        {% capture handle %}{{ link.title | handle }}{% endcapture %}
+
+        {% if linklists[handle] and linklists[handle].links.size > 0 and levels > 2 %}
+          <li class="{{item_class}} has-dropdown">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+
+            {% comment %} Level 3 {% endcomment %}
+
+            <ul class="dropdown">
+              {% for link in linklists[handle].links %}
+                {% include 'nav-item-class' %}
+                <li class="{{item_class}}">
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+
+            {% comment %} End level 3 {% endcomment %}
+
+          </li>
+        {% else %}
+          <li class="{{item_class}}">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endif %}
+
+      {% endfor %}
+      </ul>
+      {% comment %} End level 2 {% endcomment %}
+
+    </li>
+  {% else %}
+    <li class="{{item_class}}">
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    </li>
+  {% endif %}
+
+{% endfor %}
+
+
+{% if nav_area == 'primary' %}
+  {% if shop.customer_accounts_enabled %}
+    {% if customer %}
+      <li class="hide-for-medium-up">
+        <a href="/account">My Account</a>
+      </li>
+      <li class="hide-for-medium-up">
+        <a href="/account/logout">Sign-out</a>
+      </li>
+    {% else %}
+      <li class="hide-for-medium-up">
+        <a href="/account">My Account</a>
+      </li>
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+{% comment %} End level 1 {% endcomment %}

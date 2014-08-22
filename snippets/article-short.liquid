@@ -1,0 +1,17 @@
+{% include 'article-open' %}
+
+<div class="row">
+  <div class="large-9 large-push-3 columns">
+    <header>
+      <h2 class="entry-title">
+        {{ article.title | escape | link_to: article.url }}
+      </h2>
+    </header>
+    {% include 'article-body' %}
+  </div>
+  <div class="large-3 large-pull-9 columns">
+    {% include 'article-meta' %}
+  </div>
+</div>
+
+{% include 'article-close' %}

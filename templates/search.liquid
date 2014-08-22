@@ -1,0 +1,44 @@
+{% assign has_sidebar = false %}
+{% assign has_crumbs = true %}
+{% include 'settings' %}
+{% include 'page-header' with 'Search' %}
+{% include 'content-wrap-open' %}
+{% include 'content-open' %}
+
+
+<form class="form-search custom margin-bottom-300" name="search" action="/search">
+  <input type="text" id="q" name="q" class="search-query search replace" placeholder="To search type and hit enter">
+</form>
+
+{% if search.performed %}
+  {% paginate search.results by 12 %}
+
+  {% if search.results_count > 0 %}
+    <p id="results-title">Results for <strong>'{{ search.terms | escape }}'</strong>&hellip;</p>
+  {% else %}
+    <h3 id="results-title">Sorry, we couldn't find anything for '{{ search.terms | escape }}'.</h3>
+    <p>For best results, try the following: </p>
+
+    <ul>
+      <li>Check your spelling</li>
+      <li>Enter a different search term</li>
+      <li>Use fewer keywords to broaden your search</li>
+    </ul>
+
+    <p>Of course, you could always <a href="/collections">browse through the shop</a> or return <a href="/">home</a> as well.
+
+  {% endif %}
+
+  <div id="search-results">
+    {% for item in search.results %}
+      {% include 'get-content-type' with item %}
+      {% include 'search-result' with item %}
+    {% endfor %}
+  </div>
+  {% include 'pagination-numbered' %}
+  {% endpaginate %}
+{% endif %}
+
+
+{% include 'content-close' %}
+{% include 'content-wrap-close' %}

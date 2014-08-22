@@ -1,0 +1,2989 @@
+<!-- Overview -->
+<p class="sb st pl pr">Providence by <a href="http://empy.re" target="_blank">Empyre</a><span class="fr note">4.0.6</span>
+</p>
+
+<fieldset>
+  <legend>&nbsp;</legend>
+  <table>
+    <tr>
+      <td colspan="2">
+        <h4 class="sb pt"><strong>Documentation</strong></h4>
+        <p>View the theme documentation for help with getting started, details on specific theme features and helpful tips.</p>
+      </td>
+      <td><p class="ssl ssr">&nbsp;</p></td>
+      <td class="tc">
+        <a class="btn" href="http://empy.re/documentation/shopify/providence" target="_blank">View Documentation</a>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<!-- Site Design -->
+<br/>
+<h2 class="sst ssb pl pr">Site Design</h2>
+
+<fieldset>
+  <legend>Branding</legend>
+
+  <input type="hidden" name="subtheme" />
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="brand_type">Use image or text for logo?</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="brand_type" value="text"/>
+        <span class="sr">Text</span>
+        <input type="radio" name="brand_type" value="image"/>
+        <span class="sr">Image</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="brand_text">Logo text</label>
+      </td>
+      <td class="pt pb">
+        <input name="brand_text" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="brand_tagline">Tagline</label>
+      </td>
+      <td class="pt pb">
+        <input name="brand_tagline" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="brand_image">Logo image</label>
+      </td>
+      <td class="pt pb">
+        <input type="file" name="logo.png"/>
+      </td>
+    </tr>
+    <tr>
+    <td class="pt pb">
+      <label for="brand_favicon">
+        Favicon <br/>
+        <small>16px x 16px .ico</small>
+      </label>
+    </td>
+    <td class="pt pb">
+      <input type="file" name="favicon.ico"/>
+    </td>
+    </tr>
+    <tr>
+    <td class="pt pb">
+      <label for="brand_apple_touch_icon">
+        Apple touch icon <br/>
+        <small>144px x 144px .png</small>
+      </label>
+    </td>
+    <td class="pt pb">
+      <input type="file" name="apple-touch-icon.png" data-max-width="512px" data-max-height="512px"/>
+    </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Backgrounds</legend>
+
+  <h3 class="sb"><strong>Body</strong></h3>
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="bg_body_img">Background image</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="bg_body_img" value="default"/>
+        <span class="sr">Default image</span>
+        <input type="radio" name="bg_body_img" value="custom"/>
+        <span class="sr">Uploaded image</span>
+        <input type="radio" name="bg_body_img" value="none"/> <span class="sr">Solid color (no image)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_body_color">Background color</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="bg_body_color" class="color"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_body_position_x">Horizontal position</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="bg_body_position_x" value="left"/>
+        <span class="sr">Left</span>
+        <input type="radio" name="bg_body_position_x" value="center"/>
+        <span class="sr">Center</span>
+        <input type="radio" name="bg_body_position_x" value="right"/>
+        <span class="sr">Right</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_body_position_y">Vertical position</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="bg_body_position_y" value="top"/>
+        <span class="sr">Top</span>
+        <input type="radio" name="bg_body_position_y" value="center"/>
+        <span class="sr">Center</span>
+        <input type="radio" name="bg_body_position_y" value="bottom"/>
+        <span class="sr">Bottom</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_body_repeat">Repeat</label>
+      </td>
+      <td class="pt pb">
+        <select name="bg_body_repeat">
+          <option value="repeat">Horizontally and vertically</option>
+          <option value="repeat-x">Horizontally only</option>
+          <option value="repeat-y">Vertically only</option>
+          <option value="no-repeat">Don't repeat</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_body_attachment">Attachment</label>
+      </td>
+      <td class="pt pb">
+        <select name="bg_body_attachment">
+          <option value="scroll">Scroll</option>
+          <option value="fixed">Fixed</option>
+          <option value="full">Full screen</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_body_image">Upload a new image</label>
+      </td>
+      <td class="pt pb">
+        <input type="file" name="bg-body.png" />
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Main Content</strong></h3>
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="bg_content_img">Background image</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="bg_content_img" value="default"/>
+        <span class="sr">Default image</span>
+        <input type="radio" name="bg_content_img" value="custom"/>
+        <span class="sr">Uploaded image</span>
+        <input type="radio" name="bg_content_img" value="none"/> <span class="sr">Solid color (no image)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_content_color">Background color</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="bg_content_color" class="color"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_content_position_x">Horizontal position</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="bg_content_position_x" value="left"/>
+        <span class="sr">Left</span>
+        <input type="radio" name="bg_content_position_x" value="center"/>
+        <span class="sr">Center</span>
+        <input type="radio" name="bg_content_position_x" value="right"/>
+        <span class="sr">Right</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_content_position_y">Vertical position</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="bg_content_position_y" value="top"/>
+        <span class="sr">Top</span>
+        <input type="radio" name="bg_content_position_y" value="center"/>
+        <span class="sr">Center</span>
+        <input type="radio" name="bg_content_position_y" value="bottom"/>
+        <span class="sr">Bottom</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_content_repeat">Repeat</label>
+      </td>
+      <td class="pt pb">
+        <select name="bg_content_repeat">
+          <option value="repeat">Horizontally and vertically</option>
+          <option value="repeat-x">Horizontally only</option>
+          <option value="repeat-y">Vertically only</option>
+          <option value="no-repeat">Don't repeat</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_content_attachment">Attachment</label>
+      </td>
+      <td class="pt pb">
+        <select name="bg_content_attachment">
+          <option value="scroll">Scroll</option>
+          <option value="fixed">Fixed</option>
+          <option value="full">Full screen</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_content_image">Upload a new image</label>
+      </td>
+      <td class="pt pb">
+        <input type="file" name="bg-content.png" />
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Footer</strong></h3>
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="bg_footer_widgets_top_img">Top border image</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="bg_footer_widgets_top_img" value="default"/>
+        <span class="sr">Default image</span>
+        <input type="radio" name="bg_footer_widgets_top_img" value="custom"/>
+        <span class="sr">Uploaded image</span>
+        <input type="radio" name="bg_footer_widgets_top_img" value="none"/> <span class="sr">None</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_footer_widgets_top_image">Upload a new top border image</label>
+      </td>
+      <td class="pt pb">
+        <input type="file" name="bg-footer-top.png" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_footer_img">Background image</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="bg_footer_img" value="default"/>
+        <span class="sr">Default image</span>
+        <input type="radio" name="bg_footer_img" value="custom"/>
+        <span class="sr">Uploaded image</span>
+        <input type="radio" name="bg_footer_img" value="none"/> <span class="sr">Solid color (no image)</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_footer_color">Background color</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="bg_footer_color" class="color"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_footer_position_x">Horizontal position</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="bg_footer_position_x" value="left"/>
+        <span class="sr">Left</span>
+        <input type="radio" name="bg_footer_position_x" value="center"/>
+        <span class="sr">Center</span>
+        <input type="radio" name="bg_footer_position_x" value="right"/>
+        <span class="sr">Right</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_footer_position_y">Vertical position</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="bg_footer_position_y" value="top"/>
+        <span class="sr">Top</span>
+        <input type="radio" name="bg_footer_position_y" value="center"/>
+        <span class="sr">Center</span>
+        <input type="radio" name="bg_footer_position_y" value="bottom"/>
+        <span class="sr">Bottom</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_footer_repeat">Repeat</label>
+      </td>
+      <td class="pt pb">
+        <select name="bg_footer_repeat">
+          <option value="repeat">Horizontally and vertically</option>
+          <option value="repeat-x">Horizontally only</option>
+          <option value="repeat-y">Vertically only</option>
+          <option value="no-repeat">Don't repeat</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_footer_attachment">Attachment</label>
+      </td>
+      <td class="pt pb">
+        <select name="bg_footer_attachment">
+          <option value="scroll">Scroll</option>
+          <option value="fixed">Fixed</option>
+          <option value="full">Full screen</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="bg_footer_image">Upload a new image</label>
+      </td>
+      <td class="pt pb">
+        <input type="file" name="bg-footer.png" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Colors</legend>
+  <h3 class="sb"><strong>General</strong></h3>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="color_accent">Accent color</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_accent" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="header_bg_color">Header background color</label>
+      </td>
+      <td class="pt pb">
+        <input name="header_bg_color" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_brand_text">Logo text color</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_brand_text" class="color" type="text"/>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Primary Navigation</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="color_nav_primary">Color</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_nav_primary" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_nav_primary_hover">Hover</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_nav_primary_hover" class="color" type="text"/>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Body</strong> (top bar, lower footer)</h3>
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="color_body_headers">Headers</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_body_headers" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_body_text">Text</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_body_text" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_body_text_loud">Text loud</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_body_text_loud" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_body_text_quiet">Text quiet</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_body_text_quiet" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_body_link">Link</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_body_link" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_body_link_hover">Link hover</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_body_link_hover" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_body_line">Lines</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_body_line" class="color" type="text"/>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Main Content</strong> (primary content area)</h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="color_content_headers">Headers</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_content_headers" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_content_text">Text</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_content_text" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_content_text_loud">Text loud</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_content_text_loud" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_content_text_quiet">Text quiet</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_content_text_quiet" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_content_link">Link</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_content_link" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_content_link_hover">Link hover</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_content_link_hover" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_content_line">Lines</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_content_line" class="color" type="text"/>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Sidebar</strong> (primary content sidebar)</h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="color_sidebar_headers">Headers</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_sidebar_headers" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_sidebar_text">Text</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_sidebar_text" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_sidebar_text_loud">Text loud</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_sidebar_text_loud" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_sidebar_text_quiet">Text quiet</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_sidebar_text_quiet" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_sidebar_link">Link</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_sidebar_link" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_sidebar_link_hover">Link hover</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_sidebar_link_hover" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_sidebar_line">Lines</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_sidebar_line" class="color" type="text"/>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Footer</strong> (footer widgets)</h3>
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="color_footer_headers">Headers</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_footer_headers" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_footer_text">Text</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_footer_text" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_footer_text_loud">Text loud</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_footer_text_loud" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_footer_text_quiet">Text quiet</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_footer_text_quiet" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_footer_link">Link</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_footer_link" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_footer_link_hover">Link hover</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_footer_link_hover" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_footer_line">Lines</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_footer_line" class="color" type="text"/>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Buttons</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="color_button">Button color</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_button" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_button_text">Button text</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_button_text" class="color" type="text"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Typography</legend>
+
+  <p class="sst ppl ppr">This theme offers full support for <a href="http://www.google.com/webfonts" target="_blank">Google Web Fonts</a>. Simply choose any font from the library and type its exact name into one of the <strong>'Google web font (name)'</strong> inputs below. Using a Google Web Font will override that section's standard web font selection (the standard web font selection will be used as a fallback).</p>
+  <br/>
+
+  <h3 class="sb"><strong>Global Settings</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="typo_paragraph_font">Standard web font</label>
+      </td>
+      <td class="pt pb">
+        <select name="typo_paragraph_font">
+          <optgroup label="Sans-serif">
+            <option value="Helvetica, Arial, sans-serif;">Helvetica</option>
+            <option value="Lucida Grande, Arial, sans-serif;">Lucida Grande</option>
+            <option value="Verdana, Geneva, Arial, sans-serif;">Verdana</option>
+          </optgroup>
+            <optgroup label="Serif">
+            <option value="Georgia, 'Times New Roman', Times, serif;">Georgia</option>
+            <option value="'Times New Roman', Times, serif;">Times New Roman</option>
+          </optgroup>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="typo_paragraph_font_google">Google web font (name)</label>
+      </td>
+      <td class="pt pb">
+        <input name="typo_paragraph_font_google" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="typo_paragraph_font_size">Paragraph font size</label>
+      </td>
+      <td class="pt pb">
+        <input name="typo_paragraph_font_size" /> px
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="typo_paragraph_line_height">Paragraph line height</label>
+      </td>
+      <td class="pt pb">
+        <input name="typo_paragraph_line_height" /> em
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Logo Text</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="typo_logo_font">Standard web font</label>
+      </td>
+      <td class="pt pb">
+        <select name="typo_logo_font">
+          <optgroup label="Sans-serif">
+            <option value="Helvetica, Arial, sans-serif;">Helvetica</option>
+            <option value="Lucida Grande, Arial, sans-serif;">Lucida Grande</option>
+            <option value="Verdana, Geneva, Arial, sans-serif;">Verdana</option>
+          </optgroup>
+            <optgroup label="Serif">
+            <option value="Georgia, 'Times New Roman', Times, serif;">Georgia</option>
+            <option value="'Times New Roman', Times, serif;">Times New Roman</option>
+          </optgroup>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="typo_logo_font_google">Google web font (name)</label>
+      </td>
+      <td class="pt pb">
+        <input name="typo_logo_font_google" />
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Primary Navigation</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="typo_nav_primary_font">Standard web font</label>
+      </td>
+      <td class="pt pb">
+        <select name="typo_nav_primary_font">
+          <optgroup label="Sans-serif">
+            <option value="Helvetica, Arial, sans-serif;">Helvetica</option>
+            <option value="Lucida Grande, Arial, sans-serif;">Lucida Grande</option>
+            <option value="Verdana, Geneva, Arial, sans-serif;">Verdana</option>
+          </optgroup>
+            <optgroup label="Serif">
+            <option value="Georgia, 'Times New Roman', Times, serif;">Georgia</option>
+            <option value="'Times New Roman', Times, serif;">Times New Roman</option>
+          </optgroup>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="typo_nav_primary_font_google">Google web font (name)</label>
+      </td>
+      <td class="pt pb">
+        <input name="typo_nav_primary_font_google" />
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Headings</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="typo_headings_font">Standard web font</label>
+      </td>
+      <td class="pt pb">
+        <select name="typo_headings_font">
+          <optgroup label="Sans-serif">
+            <option value="Helvetica, Arial, sans-serif;">Helvetica</option>
+            <option value="Lucida Grande, Arial, sans-serif;">Lucida Grande</option>
+            <option value="Verdana, Geneva, Arial, sans-serif;">Verdana</option>
+          </optgroup>
+            <optgroup label="Serif">
+            <option value="Georgia, 'Times New Roman', Times, serif;">Georgia</option>
+            <option value="'Times New Roman', Times, serif;">Times New Roman</option>
+          </optgroup>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="typo_headings_font_google">Google web font (name)</label>
+      </td>
+      <td class="pt pb">
+        <input name="typo_headings_font_google" />
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Sidebar Headings</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="typo_sidebar_headings_font">Standard web font</label>
+      </td>
+      <td class="pt pb">
+        <select name="typo_sidebar_headings_font">
+          <optgroup label="Sans-serif">
+            <option value="Helvetica, Arial, sans-serif;">Helvetica</option>
+            <option value="Lucida Grande, Arial, sans-serif;">Lucida Grande</option>
+            <option value="Verdana, Geneva, Arial, sans-serif;">Verdana</option>
+          </optgroup>
+            <optgroup label="Serif">
+            <option value="Georgia, 'Times New Roman', Times, serif;">Georgia</option>
+            <option value="'Times New Roman', Times, serif;">Times New Roman</option>
+          </optgroup>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="typo_sidebar_headings_font_google">Google web font (name)</label>
+      </td>
+      <td class="pt pb">
+        <input name="typo_sidebar_headings_font_google" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Custom CSS</legend>
+
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb" colspan="4">
+        <p>Paste your custom CSS below to have it added to your site (overrides all other settings).</p>
+
+        <textarea name="custom_css" width="100%" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<!-- General Settings -->
+<br/>
+<h2 class="sst ssb pl pr">General Settings</h2>
+
+<fieldset>
+  <legend>Currencies</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb" colspan="2">
+        <p class="ppl ppr">Although you will be able to display prices on your store front in different currencies, Shopify will still process orders in your shop's currency. For the 'Currencies to display' and 'Default currency' settings below, use the <a href="http://www.xe.com/iso4217.php" target="_blank">ISO 4217 3-letter currency codes</a> separated by spaces (e.g. CAD USD).</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="multicurrency_enabled">Enable multiple currencies?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="multicurrency_enabled" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="supported_currencies">Currencies to display</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" class="text long" name="supported_currencies" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="default_currency">Default currency</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" class="text" name="default_currency"  />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>AJAX Add to Cart</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb" colspan="2">
+
+        <p class="ppl ppr">The AJAX Add to Cart option allows your visitors to add products to their carts without being directed to the cart page afterwords. When an 'Add to Cart' button is clicked, the product is added to the cart in the background allowing for a much smoother shopping experience. The Cart Widget can be added to the sidebar and/or footer to provide a live overview of the cart status (including line items) along with links to both the full cart detail page and checkout page.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="ajax_cart_enabled">Enable AJAX Add to Cart?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="ajax_cart_enabled"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Legacy Browsers</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb" colspan="2">
+        <p class="ppl ppr">Display a friendly message to visitors using IE8 or lower to let them know that their browser is antiquated and that an upgrade is recommended (via <a href="http://browsehappy.com" target="_blank">browsehappy.com</a>) to ensure the best possible experience. This is the same method used by the popular <a href="http://html5boilerplate.com/" target="_blank">HTML5 Boilerplate</a>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="display_browsehappy?">Enable Browse Happy notice?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="display_browsehappy?"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<!-- Section Settings -->
+<br/>
+<h2 class="sst ssb pl pr">Section Settings</h2>
+
+<fieldset>
+  <legend>Primary Navigation</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="header_nav_primary_list">Link list for primary navigation</label>
+      </td>
+      <td class="pt pb">
+        <select class="linklist" name="header_nav_primary_list"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Home</legend>
+
+  <h3 class="sb"><strong>General</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="index_content_s1">Page for content</label>
+      </td>
+      <td class="pt pb">
+        <select class="page" name="index_content_s1"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="index_hb_visible?">Display highlight bar?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="index_hb_visible?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="index_hb_content">Page for highlight bar content</label>
+      </td>
+      <td class="pt pb">
+        <select class="page" name="index_hb_content"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_index_hb">Highlight bar text color</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_index_hb" class="color" type="text"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="color_index_hb_bg">Highlight bar background color</label>
+      </td>
+      <td class="pt pb">
+        <input name="color_index_hb_bg" class="color" type="text"/>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Products</strong></h3>
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="index_products">Display products from</label>
+      </td>
+      <td class="pt pb">
+        <select class="collection" name="index_products" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="index_products_order">Product order</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="index_products_order" value="default"/>
+        <span class="sr">Default</span>
+        <input type="radio" name="index_products_order" value="random"/>
+        <span class="sr">Random</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="index_products_title">Heading</label>
+      </td>
+      <td class="pt pb">
+        <input name="index_products_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="index_products_tag_filter">Show only products with tag</label>
+      </td>
+      <td class="pt pb">
+        <input name="index_products_tag_filter" />
+        <small>(case sensitive)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="index_products_limit">Number of products to show</label>
+      </td>
+      <td class="pt pb">
+        <input type="number" name="index_products_limit" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="index_products_per_row_large">Products per row on large screens<br/>
+          <small>(desktops)</small>
+        </label>
+      </td>
+      <td class="pt pb">
+        <input type="number" name="index_products_per_row_large" />
+        <small>(between 1 and 12)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="index_products_per_row_medium">Products per row on medium screens
+          <br/>
+          <small>(tablets)</small>
+        </label>
+      </td>
+      <td class="pt pb">
+        <input type="number" name="index_products_per_row_medium" />
+        <small>(between 1 and 12)</small>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Promotional Boxes</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="index_display_promo_boxes?">Display promotional boxes?</label>
+      </td>
+      <td class="pt pb">
+        <input name="index_display_promo_boxes?" type="checkbox"/>
+      </td>
+    </tr>
+  </table>
+
+  <table class="sst ssb">
+    <tr>
+      <td class="pt pb" width="10">Box</td>
+      <td class="pt pb">Image</td>
+      <td class="pt pb">Alt Text</td>
+      <td class="pt pb" width="30%">Link URL</td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label>1</label>
+      </td>
+      <td class="pt pb">
+        <input type="file" name="index-promo-box-01.jpg" />
+      </td>
+      <td class="pt pb">
+        <input type="text" name="index_promo_box_01_alt" />
+      </td>
+      <td class="pt pb">
+        <input type="text" name="index_promo_box_01_link" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label>2</label>
+      </td>
+      <td class="pt pb">
+        <input type="file" name="index-promo-box-02.jpg" />
+      </td>
+      <td class="pt pb">
+        <input type="text" name="index_promo_box_02_alt" />
+      </td>
+      <td class="pt pb">
+        <input type="text" name="index_promo_box_02_link" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label>3</label>
+      </td>
+      <td class="pt pb">
+        <input type="file" name="index-promo-box-03.jpg" />
+      </td>
+      <td class="pt pb">
+        <input type="text" name="index_promo_box_03_alt" />
+      </td>
+      <td class="pt pb">
+        <input type="text" name="index_promo_box_03_link" />
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Slideshow</strong></h3>
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="slides_visible?">Display</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="slides_visible?"/>Slideshow
+        <br/>
+        <input type="checkbox" name="slides_nav_visible?"/>Next / previous buttons
+        <br/>
+        <input type="checkbox" name="slides_playpause_visible?"/>Play / pause buttons
+        <br/>
+        <input type="checkbox" name="slides_pagination_visible?"/>Pagination
+        <br/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="slides_autoplay?">Autoplay</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="slides_autoplay?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="slides_transition">Slide transition</label>
+      </td>
+      <td class="pt pb">
+        <select name="slides_transition">
+          <option value="horizontal">Slide Horizontal</option>
+          <option value="vertical">Slide Vertical</option>
+          <option value="fade">Fade</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="slides_nav_pos">Slide navigation:</label>
+      </td>
+      <td class="pt pb">
+        <select name="slides_nav_pos">
+          <option value="top">Top</option>
+          <option value="bottom" selected="selected">Bottom</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="slides_duration">Show each slide for</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="slides_duration" />
+        <small>second(s)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="slides_transition_duration">Slide transition duration</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="slides_transition_duration" />
+        <small>second(s)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="slides_video_ratio">Video aspect ratio</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="slides_video_ratio" /> <small>Video width / height (e.g. 16 / 9 = 1.778). Used for all slide videos.</small>
+      </td>
+    </tr>
+  </table>
+
+  <p>If you wish to not link a slide image simply leave the 'Link URL' field empty. To embed a Vimeo video instead of an image, simply paste the video ID in the 'Vimeo video ID' field.</p>
+
+  <table class="sst ssb standard-table">
+    <tr>
+      <td class="pt pb" width="10">
+        <strong>Slide</strong>
+        <br/><br/>
+      </td>
+      <td class="pt pb">
+        <strong>Visible?</strong>
+        <br/><br/>
+      </td>
+      <td class="pt pb">
+        <strong>Image</strong>
+        <br/><br/>
+      </td>
+      <td class="pt pb" width="30%">
+        <strong>Link URL</strong> (if image) or <br/> <strong>Vimeo video ID</strong> (if video)<br/>
+      </td>
+      </tr>
+      <tr>
+        <td class="pt pb">
+          <label for="slides_display_01?">1</label>
+        </td>
+        <td class="pt pb">
+          <input type="checkbox" name="slides_display_01?"/>
+        </td>
+        <td class="pt pb">
+          <input type="file" name="index-slide-01.jpg"/>
+        </td>
+        <td class="pt pb">
+          <input type="text" class="medium" name="slide_01_link"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="pt pb">
+          <label for="slides_display_02?">2</label>
+        </td>
+        <td class="pt pb">
+          <input type="checkbox" name="slides_display_02?"/>
+        </td>
+        <td class="pt pb">
+          <input type="file" name="index-slide-02.jpg"/>
+        </td>
+        <td class="pt pb">
+          <input type="text" class="medium" name="slide_02_link"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="pt pb">
+          <label for="slides_display_03?">3</label>
+        </td>
+        <td class="pt pb">
+          <input type="checkbox" name="slides_display_03?"/>
+        </td>
+        <td class="pt pb">
+          <input type="file" name="index-slide-03.jpg"/>
+        </td>
+        <td class="pt pb">
+          <input type="text" class="medium" name="slide_03_link"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="pt pb">
+          <label for="slides_display_04?">4</label>
+        </td>
+        <td class="pt pb">
+          <input type="checkbox" name="slides_display_04?"/>
+        </td>
+        <td class="pt pb">
+          <input type="file" name="index-slide-04.jpg"/>
+        </td>
+        <td class="pt pb">
+          <input type="text" class="medium" name="slide_04_link"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="pt pb">
+          <label for="slides_display_05?">5</label>
+        </td>
+        <td class="pt pb">
+          <input type="checkbox" name="slides_display_05?"/>
+        </td>
+        <td class="pt pb">
+          <input type="file" name="index-slide-05.jpg"/>
+        </td>
+        <td class="pt pb">
+          <input type="text" class="medium" name="slide_05_link"/>
+        </td>
+      </tr>
+      <tr>
+        <td class="pt pb">
+          <label for="slides_display_06?">6</label>
+        </td>
+        <td class="pt pb">
+          <input type="checkbox" name="slides_display_06?"/>
+        </td>
+        <td class="pt pb">
+          <input type="file" name="index-slide-06.jpg"/>
+        </td>
+        <td class="pt pb">
+          <input type="text" class="medium" name="slide_06_link"/>
+        </td>
+      </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Product Collection</legend>
+  <h3 class="sb"><strong>General</strong></h3>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="collection_products_per_page">Products per page</label>
+      </td>
+      <td class="pt pb">
+        <input type="number" name="collection_products_per_page" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_products_per_row_large">Products per row on desktop screens</label>
+      </td>
+      <td class="pt pb">
+        <input type="number" name="collection_products_per_row_large" />
+        <small>(between 1 and 12)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_products_per_row_medium">Products per row on tablet screens</label>
+      </td>
+      <td class="pt pb">
+        <input type="number" name="collection_products_per_row_medium" />
+        <small>(between 1 and 12)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_browse_text">Tag filter dropdown label</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="collection_browse_text" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_display_browse?">Display 'Browse' dropdown?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="collection_display_browse?"/>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Products</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="collection_image_height">Fix image height</label>
+      </td>
+      <td class="pt pb">
+        <input type="number" name="collection_image_height" /> px&nbsp;&nbsp;
+        <small>(set to 0 to disable)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_display_vendor?">Display vendor?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="collection_display_vendor?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_display_price?">Display price?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="collection_display_price?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_display_variant_selector?">Display variant selector?</label>
+      </td>
+      <td class="pt pb">
+        <input name="collection_display_variant_selector?" type="checkbox" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_display_actions?">Display 'Add to Cart' button?</label>
+      </td>
+      <td class="pt pb">
+        <input name="collection_display_actions?" type="checkbox" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_display_sale?">Display sale sticker?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="collection_display_sale?"/>
+        <small>(shown when product has 'compare at' price)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_sale_sticker_text">Sale sticker text</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="collection_sale_sticker_text" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_sale_sticker_color">Sale sticker color</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="collection_sale_sticker_color" class="color"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="collection_sale_sticker_text_color">Sale sticker text color</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="collection_sale_sticker_text_color" class="color"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Product</legend>
+  <h3 class="sb"><strong>Single Product</strong></h3>
+
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="product_fi_zoom_enabled?">Enable image zoom?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="product_fi_zoom_enabled?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_collection_nav_top?">Display product navigation</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="product_collection_nav_top?"/>
+        <span class="sr">Top</span>
+        <input type="checkbox" name="product_collection_nav_bottom?"/>
+        <span class="sr">Bottom</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_display_vendor?">Display vendor?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="product_display_vendor?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_display_compare_at?">Display compare at price?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="product_display_compare_at?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_display_quantity?">Display quantity select?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="product_display_quantity?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_variations_location">Display variant selection boxes</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="product_variations_location" value="top"/>
+        <span class="sr">Above description</span>
+        <input type="radio" name="product_variations_location" value="bottom"/> <span class="sr">Below description</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_cart_button_text">'Add to cart' button text</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="product_cart_button_text" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_display_sharing?">Display social sharing buttons?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="product_display_sharing_google_plus?"/>
+        <span class="sr">Google+</span>
+        <input type="checkbox" name="product_display_sharing_twitter?"/>
+        <span class="sr">Twitter</span>
+        <input type="checkbox" name="product_display_sharing_facebook?"/>
+        <span class="sr">Facebook</span>
+        <input type="checkbox" name="product_display_sharing_pinterest?"/>
+        <span class="sr">Pinterest</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_display_tags?">Display product tags?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="product_display_tags?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_backorder_text">Backorder text</label>
+      </td>
+      <td class="pt pb">
+        <textarea name="product_backorder_text" cols="50" rows="3"></textarea>
+        <small>Tip: use [product-name] to dynamically insert product name.</small>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Related Products</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="product_display_related?">Display related products?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="product_display_related?"/>
+        <small>(displays additional products from same collection)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_related_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="product_related_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="product_related_limit">Number of products to show</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="product_related_limit" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Blog</legend>
+  <h3 class="sb"><strong>Article List</strong></h3>
+
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="blog_articles_per_page">Articles per page</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="blog_articles_per_page" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="blog_articles_display_author?">Display author?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="blog_articles_display_author?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="blog_articles_display_date?">Display publish date?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="blog_articles_display_date?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="blog_articles_display_time?">Display publish time?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="blog_articles_display_time?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="blog_articles_display_comment_count?">Display comment count?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="blog_articles_display_comment_count?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="blog_articles_display_style">Show</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="blog_articles_display_style" value="excerpt"/>
+        <span class="sr">Excerpt</span>
+        <input type="radio" name="blog_articles_display_style" value="full"/>
+        <span class="sr">Full article</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="blog_articles_excerpt_length">Excerpt length (# of words)</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="blog_articles_excerpt_length" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="blog_articles_read_more_text">'Read more' link text</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="blog_articles_read_more_text" />
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Single Article</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="article_display_author?">Display author?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="article_display_author?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="article_display_date?">Display publish date?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="article_display_date?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="article_display_time?">Display publish time?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="article_display_time?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="article_display_comment_count?">Display comment count?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="article_display_comment_count?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="article_display_sharing?">Display social sharing buttons?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="article_display_sharing_google_plus?"/>
+        <span class="sr">Google+</span>
+        <input type="checkbox" name="article_display_sharing_twitter?"/>
+        <span class="sr">Twitter</span>
+        <input type="checkbox" name="article_display_sharing_facebook?"/>
+        <span class="sr">Facebook</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="article_display_prev_next?">Display previous/next links?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="article_display_prev_next?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="article_comments_title_text">Comments title text</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="article_comments_title_text" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="article_comment_form_title_text">Comment form title text</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="article_comment_form_title_text" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Contact</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="contact_form_title_text">Contact form title</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="contact_form_title_text" class="long"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="contact_form_custom_fields">Contact form custom fields</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="contact_form_custom_fields" class="long"/>
+          <small>Separate fields with a comma. Add an exclamation point to the end of a field name to make it requird.</small>
+        </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Cart</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="cart_display_note?">Enable order notes?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="cart_display_note?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="cart_page_content">Display additional content from</label>
+      </td>
+      <td class="pt pb">
+        <select class="page" name="cart_page_content"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="shipping_calculator_default_country">Shipping calculator default country</label> <small>(e.g. United States, Canada, etc.)</small>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="shipping_calculator_default_country"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Customer Accounts</legend>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="customer_account_login_text">Customer log-in box text</label>
+      </td>
+      <td class="pt pb">
+        <textarea name="customer_account_login_text" cols="50" rows="3"></textarea>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Sidebar</legend>
+
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="sidebar_side">Default side</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="sidebar_side" value="left"/>
+        <span class="sr">Left</span>
+        <input type="radio" name="sidebar_side" value="right"/>
+        <span class="sr">Right</span>  <small>Can be overridden with page templates.</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label>Display sidebar</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="sidebar_display_index?"/>
+        <span class="sr">Home</span><br />
+        <input type="checkbox" name="sidebar_display_page?"/>
+        <span class="sr">Pages</span><br />
+        <input type="checkbox" name="sidebar_display_collection?"/>
+        <span class="sr">Collections</span><br />
+        <input type="checkbox" name="sidebar_display_product?"/>
+        <span class="sr">Products</span><br />
+        <input type="checkbox" name="sidebar_display_blog?"/>
+        <span class="sr">Blog</span><br />
+        <input type="checkbox" name="sidebar_display_article?"/>
+        <span class="sr">Articles</span><br />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Footer</legend>
+
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="footer_nav_primary_list">Link list for footer navigation</label>
+      </td>
+      <td class="pt pb">
+        <select class="linklist" name="footer_nav_primary_list"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="remove_attribution_empyre?">Remove 'design by' attribution?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="remove_attribution_empyre?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="footer_display_currency?">Display store currency notice?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="footer_display_currency?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="payment_methods_accepted_text">Payment methods accepted text</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="payment_methods_accepted_text" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="payment_methods">Display payment icons for</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="payment_methods_display_paypal?"/>
+        <span class="sr">PayPal</span><br />
+        <input type="checkbox" name="payment_methods_display_google-checkout?"/>
+        <span class="sr">Google Checkout</span><br />
+        <input type="checkbox" name="payment_methods_display_visa?"/>
+        <span class="sr">Visa</span><br />
+        <input type="checkbox" name="payment_methods_display_mastercard?"/>
+        <span class="sr">Mastercard</span><br />
+        <input type="checkbox" name="payment_methods_display_maestro?"/>
+        <span class="sr">Maestro</span><br />
+        <input type="checkbox" name="payment_methods_display_cirrus?"/>
+        <span class="sr">Cirrus</span><br />
+        <input type="checkbox" name="payment_methods_display_american-express?"/>
+        <span class="sr">American Express</span><br />
+        <input type="checkbox" name="payment_methods_display_discover?"/>
+        <span class="sr">Discover</span><br />
+        <input type="checkbox" name="payment_methods_display_bitcoin?"/>
+        <span class="sr">Bitcoin</span><br />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<!-- Widget Placement -->
+<br/>
+<h2 class="sst ssb pl pr">Widget Placement</h2>
+
+<fieldset>
+  <legend>Sidebar</legend>
+  <p class="sst ppl ppr">Build your <strong>page sidebar</strong> by selecting a widget for each position or select None to leave that position empty. You can set up your widgets in the <strong>'widget setup'</strong> section below.</p>
+  <br/>
+  <hr />
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="page_sidebar_widget_01">Page sidebar widget 1</label>
+      </td>
+      <td class="pt pb">
+        <select name="page_sidebar_widget_01">
+          <option value="none" selected="selected">None</option>
+          <option value="collections">Collection list</option>
+          <option value="customer_session">Customer log-in</option>
+          <option value="articles">Blog posts</option>
+          <option value="articles_simple">Blog posts (simple)</option>
+          <option value="links_01">Link list 1</option>
+          <option value="links_02">Link list 2</option>
+          <option value="newsletter">Newsletter sign-up</option>
+          <option value="page_content_01">Page content 1</option>
+          <option value="page_content_02">Page content 2</option>
+          <option value="page_content_03">Page content 3</option>
+          <option value="products_01">Product list 1</option>
+          <option value="products_02">Product list 2</option>
+          <option value="search">Search</option>
+          <option value="cart">Shopping cart</option>
+          <option value="social_links">Social links</option>
+          <option value="tags_articles">Tags list (articles)</option>
+          <option value="tags_products">Tags list (products)</option>
+          <option value="twitter_feed">Twitter feed</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="page_sidebar_widget_02">Page sidebar widget 2</label>
+      </td>
+      <td class="pt pb">
+        <select name="page_sidebar_widget_02">
+          <option value="none" selected="selected">None</option>
+          <option value="collections">Collection list</option>
+          <option value="customer_session">Customer log-in</option>
+          <option value="articles">Blog posts</option>
+          <option value="articles_simple">Blog posts (simple)</option>
+          <option value="links_01">Link list 1</option>
+          <option value="links_02">Link list 2</option>
+          <option value="newsletter">Newsletter sign-up</option>
+          <option value="page_content_01">Page content 1</option>
+          <option value="page_content_02">Page content 2</option>
+          <option value="page_content_03">Page content 3</option>
+          <option value="products_01">Product list 1</option>
+          <option value="products_02">Product list 2</option>
+          <option value="search">Search</option>
+          <option value="cart">Shopping cart</option>
+          <option value="social_links">Social links</option>
+          <option value="tags_articles">Tags list (articles)</option>
+          <option value="tags_products">Tags list (products)</option>
+          <option value="twitter_feed">Twitter feed</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="page_sidebar_widget_03">Page sidebar widget 3</label>
+      </td>
+      <td class="pt pb">
+        <select name="page_sidebar_widget_03">
+          <option value="none" selected="selected">None</option>
+          <option value="collections">Collection list</option>
+          <option value="customer_session">Customer log-in</option>
+          <option value="articles">Blog posts</option>
+          <option value="articles_simple">Blog posts (simple)</option>
+          <option value="links_01">Link list 1</option>
+          <option value="links_02">Link list 2</option>
+          <option value="newsletter">Newsletter sign-up</option>
+          <option value="page_content_01">Page content 1</option>
+          <option value="page_content_02">Page content 2</option>
+          <option value="page_content_03">Page content 3</option>
+          <option value="products_01">Product list 1</option>
+          <option value="products_02">Product list 2</option>
+          <option value="search">Search</option>
+          <option value="cart">Shopping cart</option>
+          <option value="social_links">Social links</option>
+          <option value="tags_articles">Tags list (articles)</option>
+          <option value="tags_products">Tags list (products)</option>
+          <option value="twitter_feed">Twitter feed</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="page_sidebar_widget_04">Page sidebar widget 4</label>
+      </td>
+      <td class="pt pb">
+        <select name="page_sidebar_widget_04">
+          <option value="none" selected="selected">None</option>
+          <option value="collections">Collection list</option>
+          <option value="customer_session">Customer log-in</option>
+          <option value="articles">Blog posts</option>
+          <option value="articles_simple">Blog posts (simple)</option>
+          <option value="links_01">Link list 1</option>
+          <option value="links_02">Link list 2</option>
+          <option value="newsletter">Newsletter sign-up</option>
+          <option value="page_content_01">Page content 1</option>
+          <option value="page_content_02">Page content 2</option>
+          <option value="page_content_03">Page content 3</option>
+          <option value="products_01">Product list 1</option>
+          <option value="products_02">Product list 2</option>
+          <option value="search">Search</option>
+          <option value="cart">Shopping cart</option>
+          <option value="social_links">Social links</option>
+          <option value="tags_articles">Tags list (articles)</option>
+          <option value="tags_products">Tags list (products)</option>
+          <option value="twitter_feed">Twitter feed</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="page_sidebar_widget_05">Page sidebar widget 5</label>
+      </td>
+      <td class="pt pb">
+        <select name="page_sidebar_widget_05">
+          <option value="none" selected="selected">None</option>
+          <option value="collections">Collection list</option>
+          <option value="customer_session">Customer log-in</option>
+          <option value="articles">Blog posts</option>
+          <option value="articles_simple">Blog posts (simple)</option>
+          <option value="links_01">Link list 1</option>
+          <option value="links_02">Link list 2</option>
+          <option value="newsletter">Newsletter sign-up</option>
+          <option value="page_content_01">Page content 1</option>
+          <option value="page_content_02">Page content 2</option>
+          <option value="page_content_03">Page content 3</option>
+          <option value="products_01">Product list 1</option>
+          <option value="products_02">Product list 2</option>
+          <option value="search">Search</option>
+          <option value="cart">Shopping cart</option>
+          <option value="social_links">Social links</option>
+          <option value="tags_articles">Tags list (articles)</option>
+          <option value="tags_products">Tags list (products)</option>
+          <option value="twitter_feed">Twitter feed</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Footer</legend>
+
+  <p class="sst ppl ppr">Build your <strong>footer</strong> by selecting a widget for each position or select None to leave that position empty. You can set up your widgets in the <strong>'widget setup'</strong> section below.</p><p class="ppl ppr">Important: the <strong>total</strong> of all column spans <strong>should be 12</strong>.</p><br/><hr />
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="footer_columns">Number of widgets to display</label>
+      </td>
+      <td class="pt pb">
+        <select name="footer_columns">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4" selected="selected">4</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="footer_widget_01">Footer widget 1</label>
+      </td>
+      <td class="pt pb">
+        <select name="footer_widget_01">
+          <option value="none" selected="selected">None</option>
+          <option value="collections">Collection list</option>
+          <option value="customer_session">Customer log-in</option>
+          <option value="articles">Blog posts</option>
+          <option value="articles_simple">Blog posts (simple)</option>
+          <option value="links_01">Link list 1</option>
+          <option value="links_02">Link list 2</option>
+          <option value="newsletter">Newsletter sign-up</option>
+          <option value="page_content_01">Page content 1</option>
+          <option value="page_content_02">Page content 2</option>
+          <option value="page_content_03">Page content 3</option>
+          <option value="products_01">Product list 1</option>
+          <option value="products_02">Product list 2</option>
+          <option value="search">Search</option>
+          <option value="cart">Shopping cart</option>
+          <option value="social_links">Social links</option>
+          <option value="tags_articles">Tags list (articles)</option>
+          <option value="tags_products">Tags list (products)</option>
+          <option value="twitter_feed">Twitter feed</option>
+        </select>
+        <span class="ssl">
+          <small class="pr">Span</small>
+          <input type="text" name="footer_column_width_01" class="short"/>
+        </span>
+        <small class="pl">column(s)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="footer_widget_02">Footer widget 2</label>
+      </td>
+      <td class="pt pb">
+        <select name="footer_widget_02">
+          <option value="none" selected="selected">None</option>
+          <option value="collections">Collection list</option>
+          <option value="customer_session">Customer log-in</option>
+          <option value="articles">Blog posts</option>
+          <option value="articles_simple">Blog posts (simple)</option>
+          <option value="links_01">Link list 1</option>
+          <option value="links_02">Link list 2</option>
+          <option value="newsletter">Newsletter sign-up</option>
+          <option value="page_content_01">Page content 1</option>
+          <option value="page_content_02">Page content 2</option>
+          <option value="page_content_03">Page content 3</option>
+          <option value="products_01">Product list 1</option>
+          <option value="products_02">Product list 2</option>
+          <option value="search">Search</option>
+          <option value="cart">Shopping cart</option>
+          <option value="social_links">Social links</option>
+          <option value="tags_articles">Tags list (articles)</option>
+          <option value="tags_products">Tags list (products)</option>
+          <option value="twitter_feed">Twitter feed</option>
+        </select>
+        <span class="ssl">
+          <small class="pr">Span</small>
+          <input type="text" name="footer_column_width_02" class="short"/>
+        </span>
+        <small class="pl">column(s)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="footer_widget_03">Footer widget 3</label>
+      </td>
+      <td class="pt pb">
+        <select name="footer_widget_03">
+          <option value="none" selected="selected">None</option>
+          <option value="collections">Collection list</option>
+          <option value="customer_session">Customer log-in</option>
+          <option value="articles">Blog posts</option>
+          <option value="articles_simple">Blog posts (simple)</option>
+          <option value="links_01">Link list 1</option>
+          <option value="links_02">Link list 2</option>
+          <option value="newsletter">Newsletter sign-up</option>
+          <option value="page_content_01">Page content 1</option>
+          <option value="page_content_02">Page content 2</option>
+          <option value="page_content_03">Page content 3</option>
+          <option value="products_01">Product list 1</option>
+          <option value="products_02">Product list 2</option>
+          <option value="search">Search</option>
+          <option value="cart">Shopping cart</option>
+          <option value="social_links">Social links</option>
+          <option value="tags_articles">Tags list (articles)</option>
+          <option value="tags_products">Tags list (products)</option>
+          <option value="twitter_feed">Twitter feed</option>
+        </select>
+        <span class="ssl">
+          <small class="pr">Span</small>
+          <input type="text" name="footer_column_width_03" class="short"/>
+        </span>
+        <small class="pl">column(s)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="footer_widget_04">Footer widget 4</label>
+      </td>
+      <td class="pt pb">
+        <select name="footer_widget_04">
+          <option value="none" selected="selected">None</option>
+          <option value="collections">Collection list</option>
+          <option value="customer_session">Customer log-in</option>
+          <option value="articles">Blog posts</option>
+          <option value="articles_simple">Blog posts (simple)</option>
+          <option value="links_01">Link list 1</option>
+          <option value="links_02">Link list 2</option>
+          <option value="newsletter">Newsletter sign-up</option>
+          <option value="page_content_01">Page content 1</option>
+          <option value="page_content_02">Page content 2</option>
+          <option value="page_content_03">Page content 3</option>
+          <option value="products_01">Product list 1</option>
+          <option value="products_02">Product list 2</option>
+          <option value="search">Search</option>
+          <option value="cart">Shopping cart</option>
+          <option value="social_links">Social links</option>
+          <option value="tags_articles">Tags list (articles)</option>
+          <option value="tags_products">Tags list (products)</option>
+          <option value="twitter_feed">Twitter feed</option>
+        </select>
+        <span class="ssl">
+          <small class="pr">Span</small>
+          <input type="text" name="footer_column_width_04" class="short"/>
+        </span>
+        <small class="pl">column(s)</small>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+
+<!-- Widget Setup -->
+<br/>
+<h2 class="sst ssb pl pr">Widget Setup</h2>
+
+
+<fieldset>
+  <legend>About Widgets</legend>
+
+  <p class="sst ssb ppl ppr">Configure all of your widgets here and then assign them to areas of your site in the <strong>'Site Layout'</strong> section above. You may assign a widget more than once but note that these settings will affect every instance of the widget regardless of where or how many times it is displayed.</p>
+</fieldset>
+
+<fieldset>
+  <legend>Collection List</legend>
+
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_collections_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_collections_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_collections_filter">Show only collections with tag</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_collections_filter" />
+        <small>(case sensitive)</small>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Customer Sign-in / Sign-out</legend>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_customer_session_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_customer_session_title" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Blog Posts</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_articles_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_blog">Show articles from</label>
+      </td>
+      <td class="pt pb">
+        <select class="blog" name="widget_articles_blog"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_limit">Number of articles to show</label>
+      </td>
+      <td class="pt pb">
+        <select name="widget_articles_limit">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected="selected">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_display_author?">Display author?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_articles_display_author?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_display_date?">Display publish date?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_articles_display_date?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_display_time?">Display publish time?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_articles_display_time?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_display_excerpt?">Display excerpt?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_articles_display_excerpt?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_display_comment_count?">Display comment count?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_articles_display_comment_count?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_excerpt_length">Excerpt length (# of words)</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="widget_articles_excerpt_length" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_read_more_text">'Read more' link text</label>
+      </td>
+      <td class="pt pb">
+        <input type="text" name="widget_articles_read_more_text" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Blog Posts (Simple)</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_simple_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_articles_simple_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_simple_blog">Show articles from</label>
+      </td>
+      <td class="pt pb">
+        <select class="blog" name="widget_articles_simple_blog"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_articles_simple_limit">Number of articles to show</label>
+      </td>
+      <td class="pt pb">
+        <select name="widget_articles_simple_limit">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected="selected">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Link List 1</legend>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_links_01_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_links_01_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_links_01">Display links from</label>
+      </td>
+      <td class="pt pb">
+        <select class="linklist" name="widget_links_01"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_links_01_levels">Number of levels</label>
+      </td>
+      <td class="pt pb">
+        <select name="widget_links_01_levels">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Link List 2</legend>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_links_02_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_links_02_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_links_02">Display links from</label>
+      </td>
+      <td class="pt pb">
+        <select class="linklist" name="widget_links_02"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_links_02_levels">Number of levels</label>
+      </td>
+      <td class="pt pb">
+        <select name="widget_links_02_levels">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Newsletter Sign-up</legend>
+
+  <p class="sst ssb ppl ppr">Note: to use the newsletter sign-up form you will need to have a <a href="http://mailchimp.com/" target="_blank">MailChimp</a> account.</p>
+
+  <hr />
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_newsletter_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_newsletter_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_newsletter_intro">Intro text</label>
+      </td>
+      <td class="pt pb">
+        <textarea name="widget_newsletter_intro" cols="45" rows="3" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_newsletter_action">Form action URL (required)</label>
+      </td>
+      <td class="pt pb">
+        <input class="long" name="widget_newsletter_action" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_newsletter_placeholder">Input placeholder text</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_newsletter_placeholder" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_newsletter_button_text">Button text</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_newsletter_button_text" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Page Content 1</legend>
+    <table class="st ssb">
+      <tr>
+        <td class="pt pb">
+          <label for="widget_page_content_01_title">Title</label>
+        </td>
+        <td class="pt pb">
+          <input name="widget_page_content_01_title" />
+        </td>
+      </tr>
+      <tr>
+        <td class="pt pb">
+          <label for="widget_page_content_01">Display content from</label>
+        </td>
+      <td class="pt pb">
+        <select class="page" name="widget_page_content_01"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Page Content 2</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_page_content_02_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_page_content_02_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_page_content_02">Display content from</label>
+      </td>
+      <td class="pt pb">
+        <select class="page" name="widget_page_content_02"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Page Content 3</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_page_content_03_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_page_content_03_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_page_content_03">Display content from</label>
+      </td>
+      <td class="pt pb">
+        <select class="page" name="widget_page_content_03"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Product List 1</legend>
+
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_01_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_products_01_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_01">Display products from</label>
+      </td>
+      <td class="pt pb">
+        <select class="collection" name="widget_products_01" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_01_filter">Show only products with tag</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_products_01_filter" />
+        <small>(case sensitive)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_01_display_images?">Display images?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_products_01_display_images?" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_01_display_description?">Display description?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_products_01_display_description?" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_01_display_button?">Display 'Details' button?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_products_01_display_button?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_01_limit">Number of products to show</label>
+      </td>
+      <td class="pt pb">
+        <select name="widget_products_01_limit">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Product List 2</legend>
+
+  <table class="st ssb" width="100%">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_02_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_products_02_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_02">Display products from</label>
+      </td>
+      <td class="pt pb">
+        <select class="collection" name="widget_products_02" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_02_filter">Show only products with tag</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_products_02_filter" />
+        <small>(case sensitive)</small>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_02_display_images?">Display images?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_products_02_display_images?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_02_display_description?">Display description?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_products_02_display_description?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_02_display_button?">Display 'Details' button?</label>
+      </td>
+      <td class="pt pb">
+        <input type="checkbox" name="widget_products_02_display_button?"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_products_02_limit">Number of products to show</label>
+      </td>
+      <td class="pt pb">
+        <select name="widget_products_02_limit">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Search</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_search_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_search_title" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Shopping Cart</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_cart_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_cart_title" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Social Links</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_social_links_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_social_links_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_social_links_size">Icon size</label>
+      </td>
+      <td class="pt pb">
+        <select name="widget_social_links_size">
+          <option value="0.75">0.75</option>
+          <option value="1">1</option>
+          <option value="1.25">1.25</option>
+          <option value="1.5">1.5</option>
+          <option value="1.75">1.75</option>
+          <option value="2" selected="selected">2</option>
+          <option value="2.25">2.25</option>
+          <option value="2.5">2.5</option>
+          <option value="2.75">2.75</option>
+          <option value="3">3</option>
+        </select> em
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_social_links_twitter">Link to <strong>Twitter</strong></label>
+      </td>
+      <td class="pt pb">
+        <input class="long" name="widget_social_links_twitter" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_social_links_facebook">Link to <strong>Facebook</strong></label>
+      </td>
+      <td class="pt pb">
+        <input class="long" name="widget_social_links_facebook" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_social_links_google-plus">Link to <strong>Google+</strong></label>
+      </td>
+      <td class="pt pb">
+        <input class="long" name="widget_social_links_google-plus" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_social_links_youtube">Link to <strong>Youtube</strong></label>
+      </td>
+      <td class="pt pb">
+        <input class="long" name="widget_social_links_youtube" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_social_links_vimeo">Link to <strong>Vimeo</strong></label>
+      </td>
+      <td class="pt pb">
+        <input class="long" name="widget_social_links_vimeo" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_social_links_instagram">Link to <strong>Instagram</strong></label>
+      </td>
+      <td class="pt pb">
+        <input class="long" name="widget_social_links_instagram" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_social_links_flickr">Link to <strong>Flickr</strong></label>
+      </td>
+      <td class="pt pb">
+        <input class="long" name="widget_social_links_flickr" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_social_links_pinterest">Link to <strong>Pinterest</strong></label>
+      </td>
+      <td class="pt pb">
+        <input class="long" name="widget_social_links_pinterest" />
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Tag Tist (Articles)</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_tags_articles_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_tags_articles_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_tags_articles_blog">Show articles from</label>
+      </td>
+      <td class="pt pb">
+        <select class="blog" name="widget_tags_articles_blog"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Tag List (Products)</legend>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_tags_products_title">Title</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_tags_products_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_tags_products_collection">Show products from</label>
+      </td>
+      <td class="pt pb">
+        <select class="collection" name="widget_tags_products_collection"/>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<fieldset>
+  <legend>Twitter Feed</legend>
+
+  <h3 class="sb"><strong>Display Method</strong></h3>
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <label for="widget_tags_products_collection">Display timeline using</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="widget_twitter_type" value="tweets"/>
+        <span class="sr"><a href="http://apps.shopify.com/tweets" target="_blank">Tweets</a></span>&nbsp;&nbsp;
+        <input type="radio" name="widget_twitter_type" value="default" checked="checked"/>
+        <span class="sr">Basic Widget</span>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Tweets App</strong></h3>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb">
+        <p class="ssb ppl ppr">Our Twitter timeline app, <a href="http://apps.shopify.com/tweets" target="_blank">Tweets</a>, lets you customize the look of your Twitter feed with your own text colors, link colors, avatar sizes, fonts and more. Since you're using one of our themes, adding Tweets is simple: just select the 'Tweets' option above and then install the app by clicking the button below.</p>
+
+        <p class="sst ppl ppr"><a class="btn btn-primary" href="http://apps.shopify.com/tweets" target="_blank">Click here to install Tweets</a></p>
+      </td>
+    </tr>
+  </table>
+
+  <h3 class="sb"><strong>Basic Widget Settings</strong></h3>
+
+  <table class="st ssb">
+    <tr>
+      <td class="pt pb" colspan="2">
+        <p class="ppl ppr">Alternatively, you can use the default Twitter widget which is limited (not by us!) to the customization options below.</p>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_twitter_feed_title">Title</label>
+      </td>
+      <td class="pt pb" colspan="2">
+        <input name="widget_twitter_feed_title" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_twitter_feed_source">Feed source (Twitter username)</label>
+      </td>
+      <td class="pt pb">
+        <input name="widget_twitter_feed_source" />
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_twitter_feed_style">Style</label>
+      </td>
+      <td class="pt pb">
+        <input type="radio" name="widget_twitter_feed_style" value="light"/> <span class="sr">Light</span>
+        <input type="radio" name="widget_twitter_feed_style" value="dark"/> <span class="sr">Dark</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="pt pb">
+        <label for="widget_twitter_feed_limit">Number of tweets to show</label>
+      </td>
+      <td class="pt pb">
+        <select name="widget_twitter_feed_limit">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected="selected">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+
+<!-- Other -->
+<br/>
+<h2 class="sst ssb pl pr">Other</h2>

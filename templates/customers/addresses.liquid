@@ -1,0 +1,87 @@
+{% layout settings.customer_layout %}
+
+{% assign form_fields = 'first_name,last_name,company,address1,address2,city,country,province,zip,phone' | split: ',' %}
+
+{% assign form_field_labels = 'First name,Last name,Company,Address 1,Address 2,City,Country,Province,Zip/Postal,Phone' | split: ',' %}
+
+{% assign has_sidebar = false %}
+{% assign has_crumbs = true %}
+{% include 'page-header' with 'Manage Addresses' %}
+{% include 'content-wrap-open' %}
+{% include 'content-open' %}
+
+<div class="page-actions">
+  <a href="#" class="action-add button"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add a new address</a>
+</div>
+
+<div id="add_address" class="address" style="display:none;">
+  {% form 'customer_address', customer.new_address %}
+    <h3>Add a new address</h3>
+    {% include 'customer-address-fields' with 'new' %}
+  {% endform %}
+</div>
+
+{% paginate customer.addresses by 5 %}
+{% for address in customer.addresses %}
+
+<div id="address_{{address.id}}" class="address">
+
+  {% if address == customer.default_address %}
+  <span class="label secondary radius">Default address</span>
+  {% endif %}
+
+  <div class="row">
+    <div class="medium-3 columns">
+      <ul class="vcard">
+        <li class="fn">{{ address.first_name }} {{ address.last_name }}</li>
+        <li class="company">{{ address.company }}</li>
+      </ul>
+    </div>
+
+    <div class="medium-3 columns">
+      <ul class="vcard">
+        <li class="street-address">{{ address.address1 }}</li>
+        <li class="street-address">{{ address.address2 }}</li>
+        <li class="locality">{{ address.city }}</li>
+        <li>
+          <span class="state">{{ address.province }}</span>, <span class="zip">{{ address.province_code }}</span>
+        </li>
+        <li class="country-name">{{ address.country }}</li>
+      </ul>
+    </div>
+
+    {% if address.phone != "" %}
+      <div class="medium-3 columns">
+        <ul class="vcard">
+          <li class="phone">{{ address.phone }}</li>
+        </ul>
+      </div>
+    {% endif %}
+
+    <div class="medium-3 columns">
+      <div class="address-actions">
+        <span class="action-edit">
+          {{ "Edit" | edit_customer_address_link: address.id }}
+        </span>
+         <span class="action-delete">
+          {{ "Remove" | delete_customer_address_link: address.id }}
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="edit_address_{{address.id}}" class="address-form edit-address" style="display:none;">
+    {% form 'customer_address', address %}
+      {% include 'customer-address-fields' with form.id %}
+    {% endform %}
+  </div>
+
+</div>
+
+{% endfor %}
+{% include 'pagination-numbered' %}
+{% endpaginate %}
+
+{% include 'content-close' %}
+{% include 'content-wrap-close' %}
